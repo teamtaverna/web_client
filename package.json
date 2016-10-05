@@ -7,6 +7,7 @@
     "taverna_web_client": "server.js"
   },
   "scripts": {
+<<<<<<< fa6e01eca4a04b8ce5680eeea1ef17b71ae6cf68
     "dev": "PORT=4000 NODE_ENV=development node ./webpack/dev.server.js & PORT=4000 NODE_ENV=development node ./bin/server.js",
     "postinstall": "rsync pre-commit .git/hooks && chmod 755 .git/hooks/pre-commit",
     "pre-lint": "(cd \"./node_modules/\" && pwd)",
@@ -15,6 +16,11 @@
     "build": "webpack --verboose --colors --display-error-details --config webpack/prod.config.js",
     "coverage": "istanbul cover _mocha  \"src/**/**/*.test.*\" --require test/.setup.js"
   },
+=======
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "rsync pre-commit .git/hooks && chmod 755 .git/hooks/pre-commit"
+ },
+>>>>>>> add pre-commit hook
   "repository": {
     "type": "git",
     "url": "git+https://github.com/teamtaverna/web_client.git"
