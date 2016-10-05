@@ -1,0 +1,11 @@
+{
+  "javascript": {
+    "app": "http://localhost:4001/public/app.js"
+  },
+  "styles": {},
+  "assets": {
+    "./src/components/sample/sample.scss": {
+      "_style": ".home {\n  font-size: 20px;\n  color: red; }\n"
+    }
+  }
+}
