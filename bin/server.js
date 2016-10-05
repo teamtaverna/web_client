@@ -22,7 +22,11 @@ if (__DEVELOPMENT__) {
 
 // https://github.com/halt-hammerzeit/webpack-isomorphic-tools
 const WebpackIsomorphicTools = require('webpack-isomorphic-tools');
+<<<<<<< 56bc6ca0fa3ebf12ddbb36222bb5092b4d321173
 global.webpackIsomorphicTools = new WebpackIsomorphicTools(require('../webpack/isomorphic-tools.config'))
+=======
+global.webpackIsomorphicTools = new WebpackIsomorphicTools(require('../webpack/webpack-isomorphic-tools'))
+>>>>>>> set up eslint configuration
   .development(__DEVELOPMENT__)
   .server(rootDir, () => {
     require('../src/server');
