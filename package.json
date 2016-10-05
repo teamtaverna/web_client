@@ -29,7 +29,6 @@
     "url": "https://github.com/teamtaverna/web_client/issues"
   },
   "homepage": "https://github.com/teamtaverna/web_client#readme",
-<<<<<<< 45bd1d17e8fd3cd83681410f5b6d0ac4370c4b18
   "dependencies": {
     "babel": "^6.5.2",
     "babel-polyfill": "^6.16.0",
@@ -74,13 +73,3 @@
     "npm": "~6.6"
   }
 }
-=======
-  "devDependencies": {
-    "eslint": "^3.7.1",
-    "eslint-config-airbnb": "^12.0.0",
-    "eslint-plugin-import": "^2.0.0",
-    "eslint-plugin-jsx-a11y": "^2.2.2",
-    "eslint-plugin-react": "^6.3.0"
-  }
-}
->>>>>>> install eslint/styleguide
