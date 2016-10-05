@@ -1,3 +1,4 @@
 node_modules
 .env
 webpack-assets.json
+ignore node modules
