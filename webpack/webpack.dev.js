@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
 var IsomorphicPlugin = require('webpack-isomorphic-tools/plugin');
-var webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic-tools-config'));
+var webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic-tools.config'));
 
 module.exports = {
   context: path.join(process.env.PWD, './'),
