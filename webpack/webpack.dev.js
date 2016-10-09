@@ -5,9 +5,8 @@ var path = require('path');
 var webpack = require('webpack');
 var IsomorphicPlugin = require('webpack-isomorphic-tools/plugin');
 var webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic-tools.config'));
-
 module.exports = {
-  context: path.join(process.env.PWD, './'),
+  context: path.join(process.env.PWD, '..'),
   resolve: {
     extensions: ['', '.js'],
     modules: [
@@ -15,7 +14,7 @@ module.exports = {
       'node_modules'
     ]
   },
-  entry: ["../src/client.js"],
+  entry: ["./src/client.js"],
   output: {
     path: path.resolve('./build'),
     publicPath: '/public/',
