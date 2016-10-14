@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "6.6"
+
+install:
+  - npm install
+
+script:
+  - npm test
+  - webpack
+
+notifications:
+  slack: teamtaverna:iP55LweubU8UOBgu9e0cTeED
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: CbUfdzEjhmzvedJGh/PUFZDsnJucro3ojwfaWjli/BZ+1s8WFv4JXGPhywJEdXyKABFm/qQeOVVDt8YMO5HSknUXaUuwA6F6XDEoQMr8J8sPprfU1wXiMzZ35IuNKHsXhV2eCep7JtU3gG6fA0KeOgjqwwZESd1y+HYWo792O3ilfUqH40aIjPTkYUFoXiweovhFycOK8P/O1z1wc3rT42zpPNef2i6y+/qCyQQD8zH7kibhKqUgTsILJtTogZ6Nuqa/bGQHWbTCsNl/udoNHknmBIfdEc2xiJnQKpsTJGOBphmqb2SnyO8Srop8qmYemm+6spDT1Uw4/8zPaKRhbwNXCAUvrII9jiUQXFbmfXfH3YmYjMhrbxU1Ieaujl8zYea6fTAaBmn3kdZLwhdFQQXosQrZW6y2pxxtrFYA52Df5tTpf5deFmJIAlwR9hI/cq4KY0ZfjnVRUOeTmvduKhmI+C6xZtlpYUfnCZ9msAuuvsxUJG7SisTilEKs6OULYuzHP9N5YlBfQ7EvO1FgsJi86/CBo/4/BEq5xDvMpOX55hwBnessT/Yc4nbu72yXO2iTb46SmS9ZhtttQx2QDv2E/yA6WCU7kLdtfprxT0n0q6haIyw7qNfAnEVHzHmASI9Vazu6BPSs1VsRRTGf1wSJc+masEdCa7RkHI4jatM=
+  app:
+    master: taverna-webclient
+    staging: taverna-webclient-staging
