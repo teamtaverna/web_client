@@ -2,12 +2,12 @@ language: node_js
 node_js:
   - "6.6"
 
-install:
-  - npm install
+# install:
+#   - npm install
 
-script:
-  - npm test
-  - webpack
+# script:
+#   - npm test
+#   - webpack
 
 notifications:
   slack: teamtaverna:iP55LweubU8UOBgu9e0cTeED
