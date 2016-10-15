@@ -9,4 +9,4 @@ export class HelloWorld extends Component {
         );
   }
 }
-// ReactDOM.render(<HelloWorld/>, document.getElementById('app'));
+ReactDOM.render(<HelloWorld/>, window.document.getElementById('app'));
