@@ -1,7 +1,8 @@
 {
     "extends": "airbnb",
     "env": {
-        "es6": true
+        "es6": true,
+        "mocha": true
     },
     "installedESLint": true,
     "plugins": [
