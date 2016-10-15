@@ -17,8 +17,9 @@ export default class Html extends Component {
     store: PropTypes.object,
   };
   render() {
-    const { assets, component, store } = this.props;
+    const { assets, component} = this.props;
     const content = component ? ReactDOM.renderToString(component) : 'Yolo';
+    console.log(content, 'our content')
 
     return (
       <html lang="en-us">
@@ -45,4 +46,3 @@ export default class Html extends Component {
     );
   }
 }
-
