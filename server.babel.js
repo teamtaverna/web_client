@@ -1,3 +1,4 @@
+//  enable runtime transpilation to use ES6/7 in node
 const fs = require('fs');
 
 const babelrc = fs.readFileSync('./.babelrc');
@@ -11,4 +12,3 @@ try {
 }
 
 require('babel-register')(config);
-require('./src/server.js');

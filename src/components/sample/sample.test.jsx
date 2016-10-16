@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import Sample from './sample';
+import Sample from './sample.jsx';
 
 describe('Sample', () => {
   it('should have the content', () => {

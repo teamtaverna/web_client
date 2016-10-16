@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable */
+require('../server.babel');
 const path = require('path');
 /**
  * Define isomorphic constants.
@@ -23,5 +24,5 @@ const WebpackIsomorphicTools = require('webpack-isomorphic-tools');
 global.webpackIsomorphicTools = new WebpackIsomorphicTools(require('../webpack/isomorphic.config'))
   .development(__DEVELOPMENT__)
   .server('./', () => {
-    require('../server');
+    require('../src/server');
   });

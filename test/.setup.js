@@ -1,4 +1,4 @@
-require('babel-register')();
+require('../server.babel');
 
 var jsdom = require('jsdom').jsdom;
 
