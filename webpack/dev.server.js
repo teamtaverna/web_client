@@ -27,4 +27,4 @@ new WebpackDevServer(webpack(config), {
   proxy: {
     '*': { target: 'http://localhost:8000' },
   },
-}).listen(8005, () => console.info('==> 💻  Webpack Dev Server at http://localhost:8001'));
+}).listen(8005, () => console.info('==> 💻  Webpack Dev Server at http://localhost:8005'));

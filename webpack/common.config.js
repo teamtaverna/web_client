@@ -12,6 +12,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   output: {
+    publicPath: 'http://localhost:8005/public/',
     path: path.resolve(__dirname, '../dist/js'),
     filename: '[name].[hash].js',
     chunkFilename: '[id].[hash].chunk.js'
@@ -39,7 +40,7 @@ module.exports = {
     // SASS
     {
       test: /\.scss$/,
-      loader: 'style!css!sass'
+      loader: 'style!css!'
     }, {
       test: /\.(png|jpg)$/,
       loader: 'url?limit=25000'

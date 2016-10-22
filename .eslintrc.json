@@ -43,6 +43,7 @@
                 ],
                 "groups":{
                     "context":[
+                        "constructor",
                         "displayName",
                         "mixins",
                         "propTypes",
@@ -52,7 +53,6 @@
                     ],
                     "lifecycle":[
                         "defaultProps",
-                        "constructor",
                         "getDefaultProps",
                         "getInitialState",
                         "getChildContext",

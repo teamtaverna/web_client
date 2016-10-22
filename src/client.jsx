@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
-import Html from './helpers/Html';
+import { Sample } from './components';
 
 const mountNode = document.getElementById('content');
-render(Html, mountNode);
+render(<Sample />, mountNode);
