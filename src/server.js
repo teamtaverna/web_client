@@ -12,9 +12,9 @@ app.get('*', (req, res) => {
   res.status(200).send('<!doctype html>\n' +
   ReactDOM.renderToString(<Html assets={webpackIsomorphicTools.assets()} component={sampleComponent}/>)); }
 );
-app.listen(5000, (err) => {
+app.listen(+process.env.PORT, (err) => {
   if (err) {
-    console.error(err);
+    console.error(err, 'this is the error', process.env.PORT);
   }
-  console.info('==> ✅  Tarvana App Now running on  http://localhost:5000');
+  console.info(`==> ✅  Tarvana App Now running on  http://localhost:${process.env.PORT}`);
 });

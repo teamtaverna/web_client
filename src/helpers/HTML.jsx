@@ -16,9 +16,8 @@ export default class Html extends Component {
     component: PropTypes.node,
   };
   render() {
-    const { assets, component} = this.props;
+    const { assets, component } = this.props;
     const content = component ? ReactDOM.renderToString(component) : 'Yolo';
-    console.log(content, 'our content')
 
     return (
       <html lang="en-us">
@@ -40,7 +39,7 @@ export default class Html extends Component {
         <body>
           <div id="content" dangerouslySetInnerHTML={{ __html: content }} />
         {Object.keys(assets.javascript).map((script, i) =>
-          <script src={assets.javascript[script]} key={i} />
+          <script src={__DEVELOPMENT__ ? assets.javascript[script] : `/dist/js/${assets.javascript[script]}`} key={i} />
         )}
         </body>
       </html>

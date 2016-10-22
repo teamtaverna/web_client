@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const sampleStyles = require('./sample.scss');
+require('./sample.scss');
 
 export default class Sample extends Component {
   constructor() {
@@ -9,11 +9,12 @@ export default class Sample extends Component {
   }
   checkTest() {
     console.log(this)
-    console.log('we are here?');
+    console.log('just a test event listener');
   }
   render() {
     return (
-      <div className={sampleStyles.home}>This is a sample Component
+      <div>
+        <p className="home">This is a sample Component</p>
         <button onClick={this.checkTest}> Test Button </button>
       </div>
     );

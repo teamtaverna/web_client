@@ -4,6 +4,7 @@ const path = require('path')
 const IsomorphicPlugin = require('webpack-isomorphic-tools/plugin');
 const webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic.config'));
 
+const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: {
     app: "./src/client",
@@ -12,10 +13,10 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   output: {
-    publicPath: 'http://localhost:8005/public/',
+    publicPath: isDev ? `http://localhost:${+process.env.PORT + 1}/public/`: '',
     path: path.resolve(__dirname, '../dist/js'),
-    filename: '[name].[hash].js',
-    chunkFilename: '[id].[hash].chunk.js'
+    filename: isDev ? '[name].js': '[name].[hash].js',
+    chunkFilename: isDev ? '[id].chunk.js': '[id].[hash].chunk.js'
   },
   module: {
     loaders: [{
@@ -40,11 +41,10 @@ module.exports = {
     // SASS
     {
       test: /\.scss$/,
-      loader: 'style!css!'
-    }, {
-      test: /\.(png|jpg)$/,
-      loader: 'url?limit=25000'
-    },
+      loader: 'style!css!sass'
+    }, 
+    { test: webpackIsomorphicToolsPlugin.regular_expression('images'), loader: 'url-loader?limit=10240' }
+      ,
 
     // Needed for the css-loader if you're using bootstrap-webpack(https://github.com/bline/bootstrap-webpack)
     // loads bootstrap's css.

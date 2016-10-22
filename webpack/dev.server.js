@@ -25,6 +25,6 @@ new WebpackDevServer(webpack(config), {
     'Access-Control-Allow-Origin': '*',
   },
   proxy: {
-    '*': { target: 'http://localhost:8000' },
+    '*': { target: `http://localhost:${+process.env.PORT}` },
   },
-}).listen(8005, () => console.info('==> 💻  Webpack Dev Server at http://localhost:8005'));
+}).listen(+process.env.PORT + 1, () => console.info(`==> 💻  Webpack Dev Server at http://localhost:${+process.env.PORT + 1}`));
