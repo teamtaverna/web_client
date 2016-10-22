@@ -8,7 +8,6 @@ const express = require('express');
 const app = express();
 
 app.get('*', (req, res) => {
-  console.log(webpackIsomorphicTools.assets(), 'gives us what we want');
   const sampleComponent = (<Sample />);
   res.status(200).send('<!doctype html>\n' +
   ReactDOM.renderToString(<Html assets={webpackIsomorphicTools.assets()} component={sampleComponent}/>)); }

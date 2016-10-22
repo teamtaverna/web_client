@@ -11,12 +11,6 @@ const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
 module.exports = webpackMerge(commonConfig, {
   devtool: 'cheap-source-map',
-
-  output: {
-    path: './build/js',
-    filename: '[name].[hash].js',
-    chunkFilename: '[id].[hash].chunk.js'
-  },
   plugins: [
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.DedupePlugin(),

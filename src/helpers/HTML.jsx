@@ -40,7 +40,9 @@ export default class Html extends Component {
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{ __html: content }} />
-          <script src={assets.javascript.main} charSet="UTF-8" />
+        {Object.keys(assets.javascript).map((script, i) =>
+          <script src={assets.javascript[script]} key={i} />
+        )}
         </body>
       </html>
     );

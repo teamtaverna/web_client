@@ -9,12 +9,6 @@ const webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic.
 
 module.exports = webpackMerge(commonConfig, {
   devtool: 'cheap-module-eval-source-map',
-  output: {
-    path: path.resolve('./build'),
-    filename: '[name].js',
-    chunkFilename: '[id].chunk.js'
-  },
-
   plugins: [
     new ExtractTextPlugin('[name].css'),
     new webpack.ProvidePlugin({

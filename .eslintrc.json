@@ -3,7 +3,8 @@
     "env": {
         "es6": true,
         "mocha": true,
-        "node": true
+        "node": true,
+        "browser": true
     },
     "installedESLint": true,
     "plugins": [
@@ -30,6 +31,40 @@
                 "devDependencies": true,
                 "optionalDependencies": false,
                 "peerDependencies": false
+            }
+        ],
+        "react/sort-comp":[2,
+            {
+                "order":[
+                    "context",
+                    "everything-else",
+                    "lifecycle",
+                    "render"
+                ],
+                "groups":{
+                    "context":[
+                        "displayName",
+                        "mixins",
+                        "propTypes",
+                        "contextTypes",
+                        "childContextTypes",
+                        "statics"
+                    ],
+                    "lifecycle":[
+                        "defaultProps",
+                        "constructor",
+                        "getDefaultProps",
+                        "getInitialState",
+                        "getChildContext",
+                        "componentWillMount",
+                        "componentDidMount",
+                        "componentWillReceiveProps",
+                        "shouldComponentUpdate",
+                        "componentWillUpdate",
+                        "componentDidUpdate",
+                        "componentWillUnmount"
+                    ]
+                }
             }
         ]
     }

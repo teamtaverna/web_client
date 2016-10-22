@@ -8,6 +8,14 @@ module.exports = {
   entry: {
     app: "./src/client",
   },
+  resolve : {
+    extensions: ['', '.js', '.jsx']
+  },
+  output: {
+    path: path.resolve(__dirname, '../dist/js'),
+    filename: '[name].[hash].js',
+    chunkFilename: '[id].[hash].chunk.js'
+  },
   module: {
     loaders: [{
       test: /\.jsx?$/,
