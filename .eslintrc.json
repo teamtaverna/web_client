@@ -33,39 +33,6 @@
                 "peerDependencies": false
             }
         ],
-        "react/sort-comp":[2,
-            {
-                "order":[
-                    "context",
-                    "everything-else",
-                    "lifecycle",
-                    "render"
-                ],
-                "groups":{
-                    "context":[
-                        "constructor",
-                        "displayName",
-                        "mixins",
-                        "propTypes",
-                        "contextTypes",
-                        "childContextTypes",
-                        "statics"
-                    ],
-                    "lifecycle":[
-                        "defaultProps",
-                        "getDefaultProps",
-                        "getInitialState",
-                        "getChildContext",
-                        "componentWillMount",
-                        "componentDidMount",
-                        "componentWillReceiveProps",
-                        "shouldComponentUpdate",
-                        "componentWillUpdate",
-                        "componentDidUpdate",
-                        "componentWillUnmount"
-                    ]
-                }
-            }
-        ]
+        "react/sort-comp":[2]
     }
 }
