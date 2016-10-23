@@ -8,8 +8,7 @@ export default class Sample extends Component {
     this.checkTest = this.checkTest.bind(this);
   }
   checkTest() {
-    console.log(this)
-    console.log('just a test event listener');
+    console.log('sample test button')
   }
   render() {
     return (
