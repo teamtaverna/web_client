@@ -8,7 +8,7 @@ export default class Sample extends Component {
     this.checkTest = this.checkTest.bind(this);
   }
   checkTest() {
-    console.log('sample test button')
+    console.log('sample test button', this.props);
   }
   render() {
     return (
