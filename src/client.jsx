@@ -5,5 +5,5 @@ import { Sample } from './components';
 
 const mountNode = document.getElementById('content');
 render(<Sample />, mountNode, () => {
-    console.log('client side now active');
+console.log('client side now active');
 });

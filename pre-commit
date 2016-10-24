@@ -3,7 +3,7 @@
 # Extract staged files to a temp directory
 export NODE_MODULES=$(npm run -s pre-lint)
 export ESLINT_PATH=`echo $NODE_MODULES"/eslint/bin/eslint.js"`
-JSFILES=$(git diff-index --name-status --cached HEAD | grep -v ^D | egrep '.js$' | cut -c3-)
+JSFILES=$(git diff-index --name-status --cached HEAD | grep -v ^D | egrep '.jsx?$' | cut -c3-)
 
 
 if [ "$JSFILES" == "" ]; then
