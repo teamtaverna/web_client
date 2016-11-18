@@ -1,0 +1,121 @@
+
+// RESET AND SEMANTIC UI OVERRIDES:
+// ===================================================================================
+body {
+  background-color: $tvn-ash;
+}
+
+.ui.medium.header {
+  letter-spacing: 0.01em;
+}
+
+.ui.sub.header {
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+}
+
+.ui.menu .item:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background: $tvn-grey;
+}
+
+
+// COMMON COMPONENTS:
+// ===================================================================================
+
+.tvn.page {
+  padding-top: 85px;
+  background-color: $tvn-ash;
+}
+
+.tvn.icon {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+// UTILITY AND EFFECT CLASSES:
+// ===================================================================================
+
+.tvn.weight{
+  &.thin {
+    font-weight: 100;
+  }
+  &.light {
+    font-weight: 300;
+  }
+  &.regular {
+    font-weight: 400;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+  &.heavy {
+    font-weight: 700;
+  }
+}
+
+.tvn.fade.clipped {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    max-width: 100px;
+    height: 100%;
+    content: " ";
+    background-image: $tvn-fade-clip;
+  }
+  &.accent:after {
+    background-image: $tvn-accented-fade-clip;
+  }
+}
+
+.tvn.positioning {
+  position: relative;
+
+  & > .positioned {
+    position: absolute;
+
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+    &.center {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &.top {
+      top: 0;
+    }
+    &.bottom {
+      bottom: 0;
+    }
+    &.middle {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.xstretch {
+      left: 0;
+      right: 0;
+    }
+    &.ystretch {
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.tvn[class*='no padding'] {
+  padding: 0 !important;
+}

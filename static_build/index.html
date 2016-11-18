@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taverna - Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- icons -->
+    <svg style="position: fixed; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-calendar" viewBox="0 0 16 16" stroke="none">
+          <title id="title">calendar</title>
+          <path d="M4.81321402,1.00002259 C4.55839508,1.04814756 4.34091316,1.09239072 4.34091316,1.48692003 L4.34091316,3.39464481 C4.33734953,3.64661285 4.56601076,3.87836044 4.81818561,3.87836044 C5.07036046,3.87836044 5.29902328,3.64661285 5.29545805,3.39464481 L5.29545805,1.48692003 C5.30077169,1.23223155 5.06811251,0.997349866 4.81321402,1.00002259 L4.81321402,1.00002259 Z M11.1271307,1.00495441 C10.8943204,1.03177712 10.7005828,1.25270653 10.7045458,1.4868723 L10.7045458,3.39459709 C10.7009821,3.64656512 10.9296434,3.87831271 11.1818182,3.87831271 C11.4339931,3.87831271 11.6626559,3.64656512 11.6590907,3.39459709 L11.6590907,1.4868723 C11.6590907,1.09239072 11.3845047,1.01120668 11.1271307,1.00495441 L11.1271307,1.00495441 Z M1.42756253,1.96384248 C1.19467903,1.9882311 0.998753923,2.20679006 1.00000597,2.44078083 L1.00000597,14.5230616 C1.00003142,14.7727865 1.22738652,14.9999682 1.47727841,15 L14.5227253,15 C14.7726172,14.9999682 14.9999723,14.7727865 14.9999978,14.5230616 L14.9999978,2.44078083 C14.9999723,2.19105598 14.7726172,1.9638743 14.5227253,1.96384248 L11.8181815,1.96384248 L11.8181815,2.91770328 L14.0454529,2.91770328 L14.0454529,4.50748506 L1.95455078,4.50748506 L1.95455078,2.91770328 L4.18182235,2.91770328 L4.18182235,1.96384248 L1.47727841,1.96384248 C1.46072183,1.96225157 1.44411911,1.96225157 1.42756253,1.96384248 L1.42756253,1.96384248 Z M5.45454887,1.96384248 L5.45454887,2.91770328 L10.545455,2.91770328 L10.545455,1.96384248 L5.45454887,1.96384248 Z M1.95455078,5.46134586 L14.0454529,5.46134586 L14.0454529,14.0461392 L1.95455078,14.0461392 L1.95455078,5.46134586 Z"></path>
+        </symbol>
+        <symbol id="icon-expand" viewBox="0 0 16 16"  stroke="none">
+          <title id="title">expand</title>
+          <path d="M8,2.45833333 C11.0625,2.45833333 13.5416667,4.9375 13.5416667,8 C13.5416667,11.0625 11.0625,13.5416667 8,13.5416667 C4.9375,13.5416667 2.45833333,11.0625 2.45833333,8 C2.45833333,4.9375 4.9375,2.45833333 8,2.45833333 L8,2.45833333 Z M8,1 C4.12083333,1 1,4.12083333 1,8 C1,11.8791667 4.12083333,15 8,15 C11.8791667,15 15,11.8791667 15,8 C15,4.12083333 11.8791667,1 8,1 L8,1 L8,1 Z M8.525,9.69166667 L10.275,7.94166667 C10.5666667,7.65 10.5666667,7.18333333 10.275,6.92083333 C9.98333333,6.62916667 9.51666667,6.62916667 9.25416667,6.92083333 L8,8.14583333 L6.775,6.92083333 C6.48333333,6.62916667 6.01666667,6.62916667 5.75416667,6.92083333 C5.4625,7.2125 5.4625,7.67916667 5.75416667,7.94166667 L7.50416667,9.69166667 C7.65,9.8375 7.825,9.89583333 8.02916667,9.89583333 C8.23333333,9.89583333 8.37916667,9.8375 8.525,9.69166667 L8.525,9.69166667 Z"></path>
+        </symbol>
+        <symbol id="icon-timetable" viewBox="0 0 16 16" stroke-width="0.9" fill="none">
+          <title id="title">timetable</title>
+          <path d="M7.00686499,6.60640732 C7.00686499,6.82745995 6.82745995,7.00686499 6.60640732,7.00686499 L1.40045767,7.00686499 C1.17940503,7.00686499 1,6.82745995 1,6.60640732 L1,1.40045767 C1,1.17940503 1.17940503,1 1.40045767,1 L6.60640732,1 C6.82745995,1 7.00686499,1.17940503 7.00686499,1.40045767 L7.00686499,6.60640732 Z M15,6.60640732 C15,6.82745995 14.820595,7.00686499 14.5995423,7.00686499 L9.39359268,7.00686499 C9.17254005,7.00686499 8.99313501,6.82745995 8.99313501,6.60640732 L8.99313501,1.40045767 C8.99313501,1.17940503 9.17254005,1 9.39359268,1 L14.5995423,1 C14.820595,1 15,1.17940503 15,1.40045767 L15,6.60640732 Z M7.00686499,14.5995423 C7.00686499,14.820595 6.82745995,15 6.60640732,15 L1.40045767,15 C1.17940503,15 1,14.820595 1,14.5995423 L1,9.39359268 C1,9.17254005 1.17940503,8.99313501 1.40045767,8.99313501 L6.60640732,8.99313501 C6.82745995,8.99313501 7.00686499,9.17254005 7.00686499,9.39359268 L7.00686499,14.5995423 Z M15,14.5995423 C15,14.820595 14.820595,15 14.5995423,15 L9.39359268,15 C9.17254005,15 8.99313501,14.820595 8.99313501,14.5995423 L8.99313501,9.39359268 C8.99313501,9.17254005 9.17254005,8.99313501 9.39359268,8.99313501 L14.5995423,8.99313501 C14.820595,8.99313501 15,9.17254005 15,9.39359268 L15,14.5995423 Z" id="Combined-Shape"></path>
+        </symbol>
+        <symbol id="icon-menu" viewBox="0 0 16 16" stroke-width="0.9" fill="none">
+          <title id="title">menu</title>
+          <polygon id="Shape" points="2.5 15 13.7 15 13.7 3.8 2.5 3.8"></polygon>
+          <polygon id="Shape" points="11.6 3.53057255 4.6 3.53057255 11.6 1"></polygon>
+          <path d="M11.1079189,9.11948862 C11.1079189,7.57595278 9.85642461,6.36808784 8.31288877,6.36808784 C6.76935293,6.36808784 5.51785863,7.57595278 5.51785863,9.11948862 L11.1079189,9.11948862 L11.1079189,9.11948862 Z" id="Shape"></path>
+          <path d="M5.16839143,10.8 L11.4573075,10.8" id="Shape"></path>
+          <path d="M5.16839143,12.2 L11.4573075,12.2" id="Shape"></path>
+          <path d="M8.1,5.58197333 L8.1,6.31816957" id="Shape"></path>
+        </symbol>
+        <symbol id="icon-vendor" viewBox="0 0 16 16" stroke="none">
+          <title id="title">vendor</title>
+          <path d="M5.18640781,3.34149612 L5.18640781,4.87685047 C5.18640781,6.56370089 6.45048549,7.9825198 7.99126221,7.9825198 C9.53203893,7.9825198 10.793204,6.56370089 10.793204,4.87685047 L10.793204,3.34149612 C11.4805826,3.26574809 12.016505,2.68307092 12.016505,1.97511815 C12.016505,1.21763783 11.3990292,0.600000024 10.6417477,0.600000024 L5.34077674,0.600000024 C4.58349518,0.600000024 3.96601944,1.21763783 3.96601944,1.97511815 C3.96601944,2.68307092 4.50194178,3.26574809 5.18640781,3.34149612 Z M7.99126221,7.16094499 C7.01262142,7.16094499 6.20291268,6.34811033 6.04854374,5.29055127 L9.93689331,5.29055127 C9.78252437,6.34811033 8.969903,7.16094499 7.99126221,7.16094499 Z M9.97184476,4.46606307 L6.01067966,4.46606307 L6.01067966,3.35023628 L9.97184476,3.35023628 L9.97184476,4.46606307 Z M5.34077674,1.42157484 L10.6417477,1.42157484 C10.9475729,1.42157484 11.1951457,1.66921264 11.1951457,1.97511815 C11.1951457,2.28102367 10.9475729,2.52866147 10.6417477,2.52866147 L5.34077674,2.52866147 C5.0349515,2.52866147 4.78737868,2.28102367 4.78737868,1.97511815 C4.78737868,1.66921264 5.0349515,1.42157484 5.34077674,1.42157484 Z M12.0048545,9.68976392 C9.4184467,8.8274017 6.56699035,8.8274017 3.97766993,9.68976392 C2.79514564,10.083071 2,11.1843309 2,12.4283466 L2,14.9892128 C2,15.2164569 2.18349515,15.4000002 2.41067962,15.4000002 L13.5689322,15.4000002 C13.7961167,15.4000002 13.9796118,15.2164569 13.9796118,14.9892128 L13.9796118,12.4283466 C13.9825244,11.1843309 13.1873788,10.083071 12.0048545,9.68976392 Z M9.54368942,9.96653558 C9.49708748,10.785197 8.82135931,11.4348821 7.99126221,11.4348821 C7.16407774,11.4348821 6.48543695,10.7822836 6.43883501,9.96653558 C7.46990298,9.83251983 8.51262144,9.83251983 9.54368942,9.96653558 Z M4.11165051,14.5784254 L2.82135923,14.5784254 L2.82135923,12.4283466 C2.82135923,11.5834647 3.3339806,10.8347246 4.10873789,10.5171655 L4.10873789,14.5784254 L4.11165051,14.5784254 Z M11.0495147,14.5784254 L4.93300975,14.5784254 L4.93300975,10.2637009 C5.16310684,10.2025198 5.39320393,10.1471655 5.62621364,10.1005513 C5.73689325,11.3096065 6.75631074,12.2593703 7.99126221,12.2593703 C9.22912631,12.2593703 10.2456312,11.3096065 10.3563108,10.1005513 C10.5893205,10.1471655 10.8194176,10.2025198 11.0495147,10.2637009 L11.0495147,14.5784254 Z M13.1611652,14.5784254 L11.8737865,14.5784254 L11.8737865,10.5171655 C12.6485438,10.8318112 13.1611652,11.5834647 13.1611652,12.4283466 L13.1611652,14.5784254 Z"></path>
+        </symbol>
+      </defs>
+    </svg><!-- end icons -->
+
+    <!-- page view-->
+    <div id="tvn page">
+
+      <!-- fixed menu -->
+      <div class="ui top fixed menu grid">
+
+        <div class="eight wide mobile
+                    four wide tablet
+                    six wide computer
+                    left floated column
+                    tvn no padding">
+          <!-- brand -->
+          <div class="tvn fade clipped brand">
+            <img class="logo" src="./img/logo.png">
+            <h1 class="name
+                       ui large header
+                       tablet or lower hidden">Starbucks Ltd.</h1>
+          </div> <!-- end brand -->
+        </div>
+
+        <div class="eight wide mobile
+                    twelve wide tablet
+                    ten wide computer
+                    right floated column
+                    tvn no padding">
+          <!-- selectors -->
+          <div class="selectors">
+
+            <!-- date selector -->
+            <div class="fitted item selector
+                        ui simple dropdown">
+              <!-- tab -->
+              <div class="tab
+                          tvn themed
+                          positioning">
+                <div class="icon section">
+                  <div class="tvn positioning
+                              calendar icon header">
+                    <svg class="tvn icon"><use xlink:href="#icon-calendar"></use></svg>
+                    <span class="ui medium header number
+                                 tvn center bottom positioned">24</span>
+                  </div>
+                  <div class="ui mobile only sub header">Aug</div>
+                </div>
+
+                <div class="mobile hidden info section
+                             tvn fade clipped">
+                  <h3 class="ui medium header">Friday</h3>
+                  <div class="ui sub header
+                              tvn regular weight">August 24, 2016</div>
+                </div>
+
+                <div class="dropdown toggle
+                            tablet or lower hidden
+                            tvn right middle positioned
+                            ">
+                  <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                </div>
+              </div> <!-- tab -->
+              <!-- dropdown menu -->
+              <div class="menu
+                          dropdown content">
+                <div>Calendar</div>
+              </div> <!-- end dropdown menu -->
+            </div><!-- end date selector -->
+
+            <!-- timetable selector -->
+            <div class="fitted item selector
+                        ui simple dropdown">
+              <!-- tab -->
+              <div class="tab
+                          tvn themed
+                          positioning">
+                <div class="icon section">
+                  <div class="icon header">
+                    <svg class="tvn icon"><use xlink:href="#icon-timetable"></use></svg>
+                  </div>
+                  <div class="ui mobile only sub header">LOS-A</div>
+                </div>
+
+                <div class="mobile hidden info section
+                            tvn fade clipped">
+                  <h3 class="ui medium header">Lagos General</h3>
+                  <div class="ui sub header
+                              tvn regular weight">Timetable</div>
+                </div>
+
+                <div class="dropdown toggle
+                            tablet or lower hidden
+                            tvn right middle positioned
+                            ">
+                  <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                </div>
+              </div> <!-- tab -->
+              <!-- dropdown menu -->
+              <div class="menu
+                          dropdown content">
+                <div>Timetables</div>
+              </div> <!-- end dropdown menu -->
+            </div><!-- end date selector -->
+
+            <!-- vendor selector -->
+            <div class="fitted item selector
+                        ui simple dropdown">
+              <!-- tab -->
+              <div class="tab
+                          tvn themed
+                          positioning
+                          ">
+                <div class="icon section">
+                  <div class="icon header">
+                    <svg class="tvn icon"><use xlink:href="#icon-vendor"></use></svg>
+                  </div>
+                  <div class="ui mobile only sub header">MPC</div>
+                </div>
+
+                <div class="mobile hidden info section
+                            tvn fade clipped">
+                  <h3 class="ui medium header">Mama Peace Catering Services</h3>
+                  <div class="ui sub header
+                              tvn regular weight">Vendor</div>
+                </div>
+
+                <div class="dropdown toggle
+                            tablet or lower hidden
+                            tvn right middle positioned
+                            ">
+                  <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                </div>
+              </div> <!-- tab -->
+              <!-- dropdown menu -->
+              <div class="menu
+                          dropdown content">
+                <div>Vendors</div>
+              </div> <!-- end dropdown menu -->
+            </div><!-- end date selector -->
+
+          </div> <!-- selectors -->
+
+        </div>
+
+      </div> <!-- end fixed top menu -->
+
+      <!-- main -->
+      <div id="main" class="main">
+
+      </div> <!-- end main -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+
+</html>

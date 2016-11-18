@@ -1,0 +1,18 @@
+
+// COLORS:
+// ===================================================================================
+$tvn-white: #FFFFFF;
+$tvn-black: #000000;
+$tvn-ash: #F4F4F4;
+$tvn-grey: rgba(221,221,221,0.5);
+$tvn-green: #28905A;
+
+$tvn-accent-color: $tvn-green;
+$tvn-fade-clip: linear-gradient(to right, transparent, $tvn-white 90%);
+$tvn-accented-fade-clip: linear-gradient(to right, transparent, $tvn-accent-color 90%);
+
+
+// LAYOUT:
+// ===================================================================================
+$tvn-fixed-top-menu-height: 90px;
+$tvn-content-border-radius: 5px;

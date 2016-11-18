@@ -1,0 +1,151 @@
+
+.top.menu {
+  border-bottom: none;
+  box-shadow: 0 1px 10px 0 rgba(34,36,38,.18);
+  height: $tvn-fixed-top-menu-height;
+
+  // remove the semantic ui item dividers:
+  & > .column {
+    height: 100%;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+
+    .logo {
+      flex: 0;
+      margin: 0;
+      width: auto;
+      height: 3.5em;
+    }
+    .name {
+      flex-shrink: 1;
+      white-space: nowrap;
+      color: $tvn-accent-color;
+      letter-spacing: -0.01em;
+      font-weight: 900;
+      margin: 0 20px;
+    }
+    @include limited-padding(20%, 40px, $after:false)
+  }
+
+  .selectors {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.top.menu .selector {
+  height: 100%;
+  width: calc(100% / 3);
+  max-width: 3600px;
+
+  @include tvn-theme-normal;
+
+  .tab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      overflow: hidden;
+    }
+    .info.section {
+      align-items: flex-start;
+      margin-right: 20%;
+    }
+    .icon.section {
+      flex: none;
+      align-items: center;
+      margin: 0 10%;
+    }
+    .icon.section .icon.header > .tvn.icon {
+      width: 40px;
+      height: 40px;
+    }
+    .header {
+      margin: 0;
+      white-space: nowrap;
+    }
+    .sub.header {
+      margin-top: 3px;
+    }
+    // this is only for calendar icon
+    .calendar.icon.header > .number {
+      margin-bottom: 6px;
+    }
+
+    // media queries:
+    @media only screen and (max-width: 767px) {
+      & {
+        justify-content: center;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .icon.section .icon.header > .tvn.icon {
+        width: 30px;
+        height: 30px;
+      }
+      // this is only for calendar icon
+      .calendar.icon.header > .number {
+        font-size: 1em;
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  .dropdown.toggle {
+    margin-right: 10%;
+    z-index: 1;
+    .tvn.icon {
+      width: 20px;
+      height: 20px;
+      opacity: 0.2;
+    }
+  }
+
+  .dropdown.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    min-width: 280px;
+    min-height: $tvn-fixed-top-menu-height;
+    left: auto;
+    right: 0;
+    border-bottom-right-radius: $tvn-content-border-radius;
+    border-bottom-left-radius: $tvn-content-border-radius;
+
+    // media queries:
+    @media only screen and (max-width: 767px) {
+      & {
+        position: fixed;
+        top: $tvn-fixed-top-menu-height !important;
+        min-width: auto;
+      }
+    }
+  }
+
+
+
+  &:hover, &:active, &:focus {
+    @include tvn-theme-accented;
+    .menu {
+      @extend .menu;
+    }
+  }
+
+}
