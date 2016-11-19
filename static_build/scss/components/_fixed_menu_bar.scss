@@ -1,0 +1,40 @@
+.top.fixed.menu {
+  border-bottom: none;
+  box-shadow: 0 1px 10px 0 rgba(34,36,38,.18);
+  height: $tvn-fixed-top-menu-height;
+
+  // remove the semantic ui item dividers:
+  & > .column {
+    height: 100%;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+
+    .logo {
+      flex: 0;
+      margin: 0;
+      width: auto;
+      height: 3.5em;
+    }
+    .name {
+      flex-shrink: 1;
+      white-space: nowrap;
+      color: $tvn-accent-color;
+      letter-spacing: $tvn-letter-spacing-large-header;
+      font-weight: 900;
+      margin: 0 20px;
+    }
+    @include limited-padding(20%, 40px, $after:false)
+  }
+
+  .selectors {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+}

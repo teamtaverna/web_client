@@ -49,6 +49,17 @@
 
 }
 
+
+// FONTS
+// ===================================================================================
+@mixin sub-header-text($weight: $tvn-font-weight-regular) {
+  font-size: $tvn-font-size-small;
+  font-weight: $weight;
+  letter-spacing: $tvn-letter-spacing-sub-header;
+  text-transform: uppercase;
+}
+
+
 // LAYOUT
 // ===================================================================================
 
@@ -64,6 +75,7 @@
   max-width: $limit;
   height: 100%;
 }
+
 @mixin limited-padding($padding, $limit, $before:true, $after:true) {
   @if ($before == true) {
     &:before {
@@ -74,5 +86,16 @@
     &:after {
       @include limited-pad($padding, $limit);
     }
+  }
+}
+
+// COMPONENTS
+// ===================================================================================
+@mixin basic-button {
+  @include sub-header-text($weight: $tvn-font-weight-heavy);
+  color: $tvn-black !important;
+  &:hover {
+    background-color: $tvn-ash;
+    border: 1px solid $tvn-grey;
   }
 }

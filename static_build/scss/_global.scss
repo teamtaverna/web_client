@@ -3,15 +3,17 @@
 // ===================================================================================
 body {
   background-color: $tvn-ash;
+  font-size: $tvn-font-size-regular;
+  font-weight: $tvn-font-weight-regular;
 }
 
 .ui.medium.header {
-  letter-spacing: 0.01em;
+  letter-spacing: $tvn-letter-spacing-medium-header;
 }
 
 .ui.sub.header {
-  font-size: 0.8em;
-  letter-spacing: 0.1em;
+  font-size: $tvn-font-size-small;
+  letter-spacing: $tvn-letter-spacing-sub-header;
 }
 
 .ui.menu .item:before {
@@ -22,6 +24,10 @@ body {
   height: 100%;
   width: 1px;
   background: $tvn-grey;
+}
+
+.ui.basic.button {
+  @include basic-button;
 }
 
 
@@ -44,38 +50,19 @@ body {
 
 .tvn.weight{
   &.thin {
-    font-weight: 100;
+    font-weight: $tvn-font-weight-thin;
   }
   &.light {
-    font-weight: 300;
+    font-weight: $tvn-font-weight-light;
   }
   &.regular {
-    font-weight: 400;
+    font-weight: $tvn-font-weight-regular;
   }
   &.bold {
-    font-weight: 700;
+    font-weight: $tvn-font-weight-bold;
   }
   &.heavy {
-    font-weight: 700;
-  }
-}
-
-.tvn.fade.clipped {
-  position: relative;
-  overflow: hidden;
-
-  &:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30%;
-    max-width: 100px;
-    height: 100%;
-    content: " ";
-    background-image: $tvn-fade-clip;
-  }
-  &.accent:after {
-    background-image: $tvn-accented-fade-clip;
+    font-weight: $tvn-font-weight-heavy;
   }
 }
 
@@ -113,6 +100,25 @@ body {
       top: 0;
       bottom: 0;
     }
+  }
+}
+
+.tvn[class*='fade clipped'] {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    max-width: 100px;
+    height: 100%;
+    content: " ";
+    background-image: $tvn-fade-clip;
+  }
+  &.accent:after {
+    background-image: $tvn-accented-fade-clip;
   }
 }
 

@@ -5,14 +5,37 @@ $tvn-white: #FFFFFF;
 $tvn-black: #000000;
 $tvn-ash: #F4F4F4;
 $tvn-grey: rgba(221,221,221,0.5);
+$tvn-dark-grey: #AAAAAA;
 $tvn-green: #28905A;
 
 $tvn-accent-color: $tvn-green;
-$tvn-fade-clip: linear-gradient(to right, transparent, $tvn-white 90%);
-$tvn-accented-fade-clip: linear-gradient(to right, transparent, $tvn-accent-color 90%);
+$tvn-fade-clip: linear-gradient(to right, transparent, $tvn-white 100%);
+$tvn-accented-fade-clip: linear-gradient(to right, transparent, $tvn-accent-color 100%);
+
+
+
+// FONTS:
+// ===================================================================================
+$tvn-font-weight-thin: 100;
+$tvn-font-weight-light: 300;
+$tvn-font-weight-regular: 400;
+$tvn-font-weight-bold: 700;
+$tvn-font-weight-heavy: 900;
+
+$tvn-font-size-small: 0.8rem;
+$tvn-font-size-regular: 1rem;
+$tvn-font-size-medium: 1.28rem;
+$tvn-font-size-large: 1.714rem;
+
+$tvn-letter-spacing-sub-header: 0.1em;
+$tvn-letter-spacing-medium-header: 0.01em;
+$tvn-letter-spacing-large-header: -0.01em;
 
 
 // LAYOUT:
 // ===================================================================================
 $tvn-fixed-top-menu-height: 90px;
+$tvn-dropdown-footer-height: 50px;
+
+$tvn-content-border-radius: 5px;
 $tvn-content-border-radius: 5px;
