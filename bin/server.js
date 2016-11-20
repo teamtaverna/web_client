@@ -22,7 +22,11 @@ if (__DEVELOPMENT__) {
 // https://github.com/halt-hammerzeit/webpack-isomorphic-tools
 const WebpackIsomorphicTools = require('webpack-isomorphic-tools');
 global.webpackIsomorphicTools = new WebpackIsomorphicTools(require('../webpack/isomorphic.config'))
-  .development(__DEVELOPMENT__)
   .server('./', () => {
-    require('../src/server');
+   if (__DEVELOPMENT__) {
+      require('../src/server');
+    }
+    else {
+      require('../dist/server');
+    }
   });

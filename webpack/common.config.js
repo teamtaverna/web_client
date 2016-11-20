@@ -4,6 +4,13 @@ const path = require('path')
 const IsomorphicPlugin = require('webpack-isomorphic-tools/plugin');
 const webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic.config'));
 
+const development = (process.env.NODE_ENV || 'development') === 'development';
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const cssNames = development ? '[name].css' : '[name].[hash].css';
+const extractCSS = new ExtractTextPlugin(cssNames);
+const autoprefixer = require('autoprefixer');
+
 const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: {
@@ -13,10 +20,10 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   output: {
-    publicPath: isDev ? `http://localhost:${+process.env.PORT + 1}/public/`: '',
-    path: path.resolve(__dirname, '../dist/js'),
+    publicPath: isDev ? `http://localhost:${+process.env.PORT + 1}/assets/`: '',
+    path: path.resolve(__dirname, '../dist/assets'),
     filename: isDev ? '[name].js': '[name].[hash].js',
-    chunkFilename: isDev ? '[id].chunk.js': '[id].[hash].chunk.js'
+    chunkFilename: isDev ? '[id].js': '[id].[hash].js'
   },
   module: {
     loaders: [{
@@ -37,11 +44,14 @@ module.exports = {
       test: /\.less$/,
       loader: 'style!css!less'
     },
-    // SASS
-    {
+        {
       test: /\.scss$/,
       loader: 'style!css!sass'
-    }, 
+    },
+    // SASS
+      //{test: /\.scss$/i, loader: extractCSS.extract(['style', 'css', 'postcss-loader', 'sass'])
+    //},
+
     { test: webpackIsomorphicToolsPlugin.regular_expression('images'), loader: 'url-loader?limit=10240' }
       ,
     {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff"},
@@ -55,6 +65,15 @@ module.exports = {
     },
   ]
   },
+  postcss: [],
+  plungis: [
+    extractCSS,
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
+
+  ],
   devtool: 'source-map',
   keepalive: true,
   debug: true,

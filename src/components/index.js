@@ -1,1 +1,1 @@
-export Sample from './sample/sample.jsx';
+export Sample from './sample/sample';

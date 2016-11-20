@@ -11,11 +11,6 @@ module.exports = webpackMerge(commonConfig, {
   devtool: 'cheap-module-eval-source-map',
   plugins: [
     new ExtractTextPlugin('[name].css'),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-    }),
     webpackIsomorphicToolsPlugin.development()
   ],
 
