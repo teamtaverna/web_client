@@ -48,10 +48,6 @@ module.exports = {
       test: /\.scss$/,
       loader: 'style!css!sass'
     },
-    // SASS
-      //{test: /\.scss$/i, loader: extractCSS.extract(['style', 'css', 'postcss-loader', 'sass'])
-    //},
-
     { test: webpackIsomorphicToolsPlugin.regular_expression('images'), loader: 'url-loader?limit=10240' }
       ,
     {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff"},
