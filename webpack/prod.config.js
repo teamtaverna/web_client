@@ -15,7 +15,7 @@ module.exports = webpackMerge(commonConfig, {
       loaders: [{
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style',
+          fallbackLoader: 'postcss-loader',
           loader: 'css?modules&importLoaders=2&sourceMap!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap=true&sourceMapContents=true' // eslint-disable-line max-len
         })
       }]
