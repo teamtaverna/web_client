@@ -6,6 +6,8 @@ import {Sample} from './components'
 
 const express = require('express');
 const app = express();
+const development = (process.env.NODE_ENV || 'development') === 'development';
+if(!development) app.use(express.static(__dirname + '/assets'));
 
 app.get('*', (req, res) => {
   const sampleComponent = (<Sample />);
