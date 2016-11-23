@@ -79,6 +79,7 @@
     "webpack-isomorphic-tools": "^2.6.3"
   },
   "engines": {
+    "node": "0.10.x",
     "npm": "~6.6"
   }
 }
