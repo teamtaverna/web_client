@@ -1,7 +1,8 @@
 .top.fixed.menu {
-  border-bottom: none;
-  box-shadow: 0 1px 10px 0 rgba(34,36,38,.18);
   height: $tvn-fixed-top-menu-height;
+  background-color: transparentize($tvn-white, 0.1);
+  border-bottom: $tvn-stroke;
+  box-shadow: $tvn-component-box-shadow;
 
   // remove the semantic ui item dividers:
   & > .column {

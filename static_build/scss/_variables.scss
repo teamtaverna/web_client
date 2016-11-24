@@ -3,15 +3,31 @@
 // ===================================================================================
 $tvn-white: #FFFFFF;
 $tvn-black: #000000;
-$tvn-ash: #F4F4F4;
-$tvn-grey: rgba(221,221,221,0.5);
+$tvn-ash: #F8F8F8;
+$tvn-grey: #E4E4E4;
 $tvn-dark-grey: #AAAAAA;
 $tvn-green: #28905A;
+$tvn-orange: #F6A623;
 
 $tvn-accent-color: $tvn-green;
+$tvn-page-bg-color: $tvn-ash;
+
+
+// EFFECTS:
+// ===================================================================================
+$toggle-dropdown-icon-opacity: 0.2;
+$tvn-component-box-shadow: 0 1px 10px 0 rgba(34,36,38,.14);
+$tvn-accented-box-shadow: 0 1px 10px 0 rgba($tvn-accent-color, 0.5);
+
+$tvn-stroke: 0.5px solid $tvn-grey;
+$tvn-accented-stroke: 1px solid $tvn-accent-color;
+
 $tvn-fade-clip: linear-gradient(to right, transparent, $tvn-white 100%);
 $tvn-accented-fade-clip: linear-gradient(to right, transparent, $tvn-accent-color 100%);
+$tvn-vertical-fade-clip: linear-gradient(to bottom, transparent, $tvn-white 100%);
+$tvn-vertical-accented-fade-clip: linear-gradient(to bottom, transparent, $tvn-accent-color 100%);
 
+$tvn-fx-duration: 0.2s;
 
 
 // FONTS:
@@ -35,7 +51,9 @@ $tvn-letter-spacing-large-header: -0.01em;
 // LAYOUT:
 // ===================================================================================
 $tvn-fixed-top-menu-height: 90px;
+$tvn-page-footer-height: 200px;
 $tvn-dropdown-footer-height: 50px;
 
-$tvn-content-border-radius: 5px;
-$tvn-content-border-radius: 5px;
+$toggle-dropdown-icon-size: 20px;
+
+$tvn-content-border-radius: 8px;

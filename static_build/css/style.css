@@ -51,7 +51,7 @@
     display: none !important; } }
 
 body {
-  background-color: #F4F4F4;
+  background-color: #F8F8F8;
   font-size: 1rem;
   font-weight: 400; }
 
@@ -62,14 +62,18 @@ body {
   font-size: 0.8rem;
   letter-spacing: 0.1em; }
 
-.ui.menu .item:before, .top.menu .selector:hover .ui.menu .item:before, .top.menu .selector:active .ui.menu .item:before, .top.menu .selector:focus .ui.menu .item:before {
+.tvn.sub.header {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em; }
+
+.ui.menu .item:before, .top.menu .selector:hover .ui.menu .item:before {
   position: absolute;
   content: '';
   top: 0;
   left: 0;
   height: 100%;
   width: 1px;
-  background: rgba(221, 221, 221, 0.5); }
+  background: #E4E4E4; }
 
 .ui.basic.button {
   font-size: 0.8rem;
@@ -77,18 +81,80 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #000000 !important; }
-  .ui.basic.button:hover {
-    background-color: #F4F4F4;
-    border: 1px solid rgba(221, 221, 221, 0.5); }
+
+.ui.star.rating .icon.active:not(.selected) {
+  color: #F6A623 !important;
+  text-shadow: none !important; }
 
 .tvn.page {
   padding-top: 85px;
-  background-color: #F4F4F4; }
+  background-color: #F8F8F8; }
 
 .tvn.icon {
   display: inline-block;
   margin: 0;
   padding: 0; }
+
+.tvn[class*="vertical stroke"] {
+  width: 0 !important;
+  border-left: 1px solid #E4E4E4; }
+
+.tvn[class*="horizontal stroke"] {
+  height: 0 !important;
+  border-top: 1px solid #E4E4E4; }
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.4; }
+  to {
+    transform: scale(5);
+    opacity: 0; } }
+
+.tvn.sonar {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  background-color: #E4E4E4;
+  border-radius: 50%; }
+  .tvn.sonar .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #E4E4E4;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none; }
+  .tvn.sonar.on {
+    background-color: #28905A; }
+    .tvn.sonar.on .wave {
+      background-color: #28905A;
+      animation: sonarWave 2s linear infinite; }
+
+.tvn.collapsible.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; }
+  .tvn.collapsible.title .header {
+    flex: none;
+    margin: 0 20px; }
+  .tvn.collapsible.title .toggle {
+    margin-left: 20px; }
+    .tvn.collapsible.title .toggle .tvn.icon {
+      flex: none;
+      width: 20px;
+      height: 20px;
+      opacity: 0.2; }
+  .tvn.collapsible.title .tvn.horizontal.stroke {
+    width: 100%; }
+
+.tvn.link {
+  color: #000000; }
+  .tvn.link:active, .tvn.link:hover, .tvn.link:focus {
+    color: #28905A; }
 
 .tvn.weight.thin {
   font-weight: 100; }
@@ -135,26 +201,42 @@ body {
   overflow: hidden; }
   .tvn[class*='fade clipped']:after {
     position: absolute;
+    content: " ";
+    pointer-events: none; }
+  .tvn[class*='fade clipped']:not(.vertical):after {
     top: 0;
     right: 0;
     width: 30%;
     max-width: 100px;
-    height: 100%;
-    content: " ";
+    min-width: 30px;
+    height: 100%; }
+  .tvn[class*='fade clipped'].vertical:after {
+    left: 0;
+    bottom: 0;
+    height: 30%;
+    max-height: 100px;
+    min-height: 30px;
+    width: 100%; }
+  .tvn[class*='fade clipped']:not(.accented):not(.vertical):after {
     background-image: linear-gradient(to right, transparent, #FFFFFF 100%); }
-  .tvn[class*='fade clipped'].accent:after {
+  .tvn[class*='fade clipped'].accented:not(.vertical):after {
     background-image: linear-gradient(to right, transparent, #28905A 100%); }
+  .tvn[class*='fade clipped'].vertical:not(.accented):after {
+    background-image: linear-gradient(to bottom, transparent, #FFFFFF 100%); }
+  .tvn[class*='fade clipped'].vertical.accent:after {
+    background-image: linear-gradient(to bottom, transparent, #28905A 100%); }
 
 .tvn[class*='no padding'] {
   padding: 0 !important; }
 
-.top.fixed.menu, .top.menu .selector:hover .top.fixed.menu, .top.menu .selector:active .top.fixed.menu, .top.menu .selector:focus .top.fixed.menu {
-  border-bottom: none;
-  box-shadow: 0 1px 10px 0 rgba(34, 36, 38, 0.18);
-  height: 90px; }
-  .top.fixed.menu > .column, .top.menu .selector:hover .top.fixed.menu > .column, .top.menu .selector:active .top.fixed.menu > .column, .top.menu .selector:focus .top.fixed.menu > .column {
+.top.fixed.menu, .top.menu .selector:hover .top.fixed.menu {
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 0.5px solid #E4E4E4;
+  box-shadow: 0 1px 10px 0 rgba(34, 36, 38, 0.14); }
+  .top.fixed.menu > .column, .top.menu .selector:hover .top.fixed.menu > .column {
     height: 100%; }
-  .top.fixed.menu .brand, .top.menu .selector:hover .top.fixed.menu .brand, .top.menu .selector:active .top.fixed.menu .brand, .top.menu .selector:focus .top.fixed.menu .brand {
+  .top.fixed.menu .brand, .top.menu .selector:hover .top.fixed.menu .brand {
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -171,34 +253,47 @@ body {
       letter-spacing: -0.01em;
       font-weight: 900;
       margin: 0 20px; }
-    .top.fixed.menu .brand:before, .top.menu .selector:hover .top.fixed.menu .brand:before, .top.menu .selector:active .top.fixed.menu .brand:before, .top.menu .selector:focus .top.fixed.menu .brand:before {
+    .top.fixed.menu .brand:before, .top.menu .selector:hover .top.fixed.menu .brand:before {
       content: '';
       flex: none;
       width: 20%;
       max-width: 40px;
       height: 100%; }
-  .top.fixed.menu .selectors, .top.menu .selector:hover .top.fixed.menu .selectors, .top.menu .selector:active .top.fixed.menu .selectors, .top.menu .selector:focus .top.fixed.menu .selectors {
+  .top.fixed.menu .selectors, .top.menu .selector:hover .top.fixed.menu .selectors {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 100%; }
 
-.top.menu .selector, .top.menu .selector:hover .top.menu .selector, .top.menu .selector:active .top.menu .selector, .top.menu .selector:focus .top.menu .selector {
+.top.menu .selector, .top.menu .selector:hover .top.menu .selector {
   height: 100%;
   width: calc(100% / 3);
   max-width: 360px;
-  transition: .2s;
+  transition: 0.2s;
   background-color: #FFFFFF; }
-  .top.menu .selector, .top.menu .selector:hover .top.menu .selector, .top.menu .selector:active .top.menu .selector, .top.menu .selector:focus .top.menu .selector, .top.menu .selector .header, .top.menu .selector:hover .top.menu .selector .header, .top.menu .selector:active .top.menu .selector .header, .top.menu .selector:focus .top.menu .selector .header {
+  .top.menu .selector, .top.menu .selector:hover .top.menu .selector, .top.menu .selector .header, .top.menu .selector:hover .top.menu .selector .header {
     color: #000000; }
   .top.menu .selector .tvn.icon {
     fill: #000000;
     stroke: #000000; }
   .top.menu .selector .tvn.stroke {
-    background-color: rgba(221, 221, 221, 0.5); }
+    background-color: #E4E4E4; }
   .top.menu .selector .tvn.fade.clipped:after {
     background-image: linear-gradient(to right, transparent, #FFFFFF 100%); }
-  .top.menu .selector .tab, .top.menu .selector:hover .top.menu .selector .tab, .top.menu .selector:active .top.menu .selector .tab, .top.menu .selector:focus .top.menu .selector .tab {
+  .top.menu .selector:hover, .top.menu .selector:hover .top.menu .selector:hover {
+    transition: 0.2s; }
+    .top.menu .selector:hover.tvn.themed, .top.menu .selector:hover .tvn.themed {
+      background-color: #28905A; }
+      .top.menu .selector:hover.tvn.themed, .top.menu .selector:hover.tvn.themed .header, .top.menu .selector:hover .tvn.themed, .top.menu .selector:hover .tvn.themed .header {
+        color: #FFFFFF; }
+      .top.menu .selector:hover.tvn.themed .tvn.icon, .top.menu .selector:hover .tvn.themed .tvn.icon {
+        fill: #FFFFFF;
+        stroke: #FFFFFF; }
+      .top.menu .selector:hover.tvn.themed .tvn.stroke, .top.menu .selector:hover .tvn.themed .tvn.stroke {
+        background-color: #F8F8F8; }
+      .top.menu .selector:hover.tvn.themed.tvn.fade.clipped:after, .top.menu .selector:hover.tvn.themed .tvn.fade.clipped:after, .top.menu .selector:hover .tvn.themed.tvn.fade.clipped:after, .top.menu .selector:hover .tvn.themed .tvn.fade.clipped:after {
+        background-image: linear-gradient(to right, transparent, #28905A 100%); }
+  .top.menu .selector .tab, .top.menu .selector:hover .top.menu .selector .tab {
     display: flex;
     align-items: center;
     width: 100%;
@@ -230,7 +325,7 @@ body {
       font-size: 1.1em;
       margin-bottom: 6px; }
     @media only screen and (max-width: 767px) {
-      .top.menu .selector .tab, .top.menu .selector:hover .top.menu .selector .tab, .top.menu .selector:active .top.menu .selector .tab, .top.menu .selector:focus .top.menu .selector .tab {
+      .top.menu .selector .tab, .top.menu .selector:hover .top.menu .selector .tab {
         justify-content: center; } }
     @media only screen and (max-width: 480px) {
       .top.menu .selector .tab .icon.section .icon.header > .tvn.icon {
@@ -255,8 +350,11 @@ body {
     max-height: 70vh;
     left: auto;
     right: 0;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px; }
+    border: 0.5px solid #E4E4E4;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 1px 10px 0 rgba(34, 36, 38, 0.14);
+    overflow: hidden; }
     @media only screen and (max-width: 767px) {
       .top.menu .selector .dropdown.menu {
         position: fixed;
@@ -274,9 +372,9 @@ body {
     align-items: center;
     width: 100%;
     height: 50px;
-    border-top: 1px solid rgba(221, 221, 221, 0.5);
+    border-top: 0.5px solid #E4E4E4;
     overflow: hidden;
-    transition: .2s;
+    transition: 0.2s;
     background-color: #FFFFFF; }
     .top.menu .selector .dropdown.menu .footer, .top.menu .selector .dropdown.menu .footer .header {
       color: #000000; }
@@ -284,10 +382,10 @@ body {
       fill: #000000;
       stroke: #000000; }
     .top.menu .selector .dropdown.menu .footer .tvn.stroke {
-      background-color: rgba(221, 221, 221, 0.5); }
+      background-color: #E4E4E4; }
     .top.menu .selector .dropdown.menu .footer .tvn.fade.clipped:after {
       background-image: linear-gradient(to right, transparent, #FFFFFF 100%); }
-  .top.menu .selector .dropdown.menu .item {
+  .top.menu .selector .dropdown.menu .list .item {
     display: flex !important;
     flex-direction: column;
     justify-content: center;
@@ -296,29 +394,22 @@ body {
     height: 90px;
     overflow: hidden;
     padding: 0 10% !important;
-    border-top: 1px solid rgba(221, 221, 221, 0.5); }
-    .top.menu .selector .dropdown.menu .item .header, .top.menu .selector .dropdown.menu .item .description {
+    border: 0;
+    border-top: 0.5px solid #E4E4E4; }
+    .top.menu .selector .dropdown.menu .list .item .header, .top.menu .selector .dropdown.menu .list .item .description {
       margin: 0;
       width: 100%;
       white-space: nowrap;
-      overflow: hidden; }
-    .top.menu .selector .dropdown.menu .item .description {
+      overflow: hidden;
+      line-height: 1.3em; }
+    .top.menu .selector .dropdown.menu .list .item .description {
       margin-top: 3px;
       color: #000000;
       font-size: 0.8rem !important; }
-  .top.menu .selector:hover, .top.menu .selector:hover .top.menu .selector:hover, .top.menu .selector:active .top.menu .selector:hover, .top.menu .selector:focus .top.menu .selector:hover, .top.menu .selector:active, .top.menu .selector:hover .top.menu .selector:active, .top.menu .selector:active .top.menu .selector:active, .top.menu .selector:focus .top.menu .selector:active, .top.menu .selector:focus, .top.menu .selector:hover .top.menu .selector:focus, .top.menu .selector:active .top.menu .selector:focus, .top.menu .selector:focus .top.menu .selector:focus {
-    transition: .2s; }
-    .top.menu .selector:hover.tvn.themed, .top.menu .selector:hover .tvn.themed, .top.menu .selector:active.tvn.themed, .top.menu .selector:active .tvn.themed, .top.menu .selector:focus.tvn.themed, .top.menu .selector:focus .tvn.themed {
-      background-color: #28905A; }
-      .top.menu .selector:hover.tvn.themed, .top.menu .selector:hover.tvn.themed .header, .top.menu .selector:hover .tvn.themed, .top.menu .selector:hover .tvn.themed .header, .top.menu .selector:active.tvn.themed, .top.menu .selector:active.tvn.themed .header, .top.menu .selector:active .tvn.themed, .top.menu .selector:active .tvn.themed .header, .top.menu .selector:focus.tvn.themed, .top.menu .selector:focus.tvn.themed .header, .top.menu .selector:focus .tvn.themed, .top.menu .selector:focus .tvn.themed .header {
-        color: #FFFFFF; }
-      .top.menu .selector:hover.tvn.themed .tvn.icon, .top.menu .selector:hover .tvn.themed .tvn.icon, .top.menu .selector:active.tvn.themed .tvn.icon, .top.menu .selector:active .tvn.themed .tvn.icon, .top.menu .selector:focus.tvn.themed .tvn.icon, .top.menu .selector:focus .tvn.themed .tvn.icon {
-        fill: #FFFFFF;
-        stroke: #FFFFFF; }
-      .top.menu .selector:hover.tvn.themed .tvn.stroke, .top.menu .selector:hover .tvn.themed .tvn.stroke, .top.menu .selector:active.tvn.themed .tvn.stroke, .top.menu .selector:active .tvn.themed .tvn.stroke, .top.menu .selector:focus.tvn.themed .tvn.stroke, .top.menu .selector:focus .tvn.themed .tvn.stroke {
-        background-color: #F4F4F4; }
-      .top.menu .selector:hover.tvn.themed.tvn.fade.clipped:after, .top.menu .selector:hover.tvn.themed .tvn.fade.clipped:after, .top.menu .selector:hover .tvn.themed.tvn.fade.clipped:after, .top.menu .selector:hover .tvn.themed .tvn.fade.clipped:after, .top.menu .selector:active.tvn.themed.tvn.fade.clipped:after, .top.menu .selector:active.tvn.themed .tvn.fade.clipped:after, .top.menu .selector:active .tvn.themed.tvn.fade.clipped:after, .top.menu .selector:active .tvn.themed .tvn.fade.clipped:after, .top.menu .selector:focus.tvn.themed.tvn.fade.clipped:after, .top.menu .selector:focus.tvn.themed .tvn.fade.clipped:after, .top.menu .selector:focus .tvn.themed.tvn.fade.clipped:after, .top.menu .selector:focus .tvn.themed .tvn.fade.clipped:after {
-        background-image: linear-gradient(to right, transparent, #28905A 100%); }
+    .top.menu .selector .dropdown.menu .list .item:hover {
+      background-color: #F8F8F8; }
+    .top.menu .selector .dropdown.menu .list .item:active {
+      background-color: #E4E4E4; }
 
 /* DayPicker styles */
 .DayPicker {
@@ -327,7 +418,9 @@ body {
   justify-content: center;
   position: relative;
   padding: 15px 10%;
-  user-select: none; }
+  margin: auto;
+  user-select: none;
+  max-width: 520px; }
 
 .DayPicker-NavBar {
   display: flex;
@@ -414,21 +507,20 @@ body {
   cursor: pointer;
   outline: none; }
   .DayPicker-Day:hover {
-    background-color: #F4F4F4;
-    border: 1px solid rgba(221, 221, 221, 0.5); }
+    background-color: #F8F8F8;
+    border: 0.5px solid #E4E4E4; }
   .DayPicker-Day:active {
-    background-color: rgba(221, 221, 221, 0.5); }
+    background-color: #E4E4E4; }
 
 .DayPicker--interactionDisabled .DayPicker-Day {
   cursor: default; }
 
 /* Default modifiers */
 .DayPicker-Day--today {
-  font-weight: 700;
-  border: 1px solid #AAAAAA; }
+  border: 1px solid #28905A; }
 
 .DayPicker-Day--disabled {
-  color: rgba(221, 221, 221, 0.5);
+  color: #E4E4E4;
   cursor: default;
   background-color: unset; }
 
@@ -440,3 +532,137 @@ body {
   color: #FFFFFF;
   background-color: #28905A;
   border: none; }
+
+.meal.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .meal.section > .vertical.stroke {
+    height: 80px; }
+  .meal.section > .horizontal.stroke {
+    width: 100%;
+    margin-top: 40px; }
+  .meal.section .header {
+    margin-top: 10px; }
+  .meal.section .schedule {
+    font-weight: 400; }
+  .meal.section .title {
+    letter-spacing: 0.9em;
+    margin-right: -0.9em;
+    font-size: 1.5em;
+    text-transform: uppercase; }
+  .meal.section .courses {
+    width: 100%; }
+    .meal.section .courses .tvn.collapsible.title {
+      margin: 15px 10%; }
+      .meal.section .courses .tvn.collapsible.title .toggle {
+        position: absolute;
+        left: 100%;
+        transition: 0.2s; }
+      .meal.section .courses .tvn.collapsible.title.active .toggle {
+        transform: rotate(180deg); }
+
+.meals .serving.card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0.5px solid #E4E4E4;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 10px 0 rgba(34, 36, 38, 0.14);
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer; }
+  .meals .serving.card .image.wrapper {
+    flex: none;
+    position: relative;
+    width: 20%;
+    height: inherit;
+    overflow: hidden; }
+    .meals .serving.card .image.wrapper .image, .meals .serving.card .image.wrapper:after {
+      width: 100%;
+      height: 100%; }
+    .meals .serving.card .image.wrapper .image {
+      background-size: cover;
+      background-position: center center;
+      transition: 0.3s; }
+    .meals .serving.card .image.wrapper:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #28905A;
+      opacity: 0.3; }
+  .meals .serving.card .content {
+    padding: 15px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column; }
+  .meals .serving.card .header {
+    margin: 0; }
+  .meals .serving.card .header + .header {
+    margin: 10px 0 5px; }
+  .meals .serving.card .meta, .meals .serving.card .description {
+    font-size: 0.8rem;
+    color: #000000; }
+  .meals .serving.card .meta {
+    margin: 10px 0 5px; }
+  .meals .serving.card .description {
+    display: flex;
+    line-height: 1.5em;
+    color: #000000; }
+  .meals .serving.card .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .meals .serving.card:hover {
+    border-color: rgba(40, 144, 90, 0.6); }
+  .meals .serving.card:active {
+    box-shadow: 0 1px 10px 0 rgba(40, 144, 90, 0.5); }
+  @media only screen and (max-width: 380px) {
+    .meals .serving.card {
+      flex-direction: column; }
+    .meals .serving.card .image.wrapper {
+      width: 100%;
+      height: 150px;
+      border-radius: 0;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px; } }
+  @media only screen and (min-width: 992px) {
+    .meals .serving.card .content {
+      height: 170px; }
+    .meals .serving.card .header, .meals .serving.card .meta, .meals .serving.card .footer {
+      flex: none; }
+    .meals .serving.card .description {
+      height: 100%; } }
+
+.main {
+  padding-top: 90px; }
+
+.main + .footer {
+  padding: 60px 0;
+  transition: 0.2s;
+  background-color: #FFFFFF;
+  background-color: unset; }
+  .main + .footer, .main + .footer .header {
+    color: #000000; }
+  .main + .footer .tvn.icon {
+    fill: #000000;
+    stroke: #000000; }
+  .main + .footer .tvn.stroke {
+    background-color: #E4E4E4; }
+  .main + .footer .tvn.fade.clipped:after {
+    background-image: linear-gradient(to right, transparent, #FFFFFF 100%); }
+  .main + .footer, .main + .footer .signature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .main + .footer .signature {
+    font-size: 0.8rem; }
+  .main + .footer .signature .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px; }

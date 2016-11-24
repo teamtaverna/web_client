@@ -3,15 +3,15 @@ $day-picker-padding: 10%;
 $calendar-row-height: 40px;
 $calendar-day-size: 30px;
 
-
-
 .DayPicker {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
   padding: 15px $day-picker-padding;
+  margin: auto;
   user-select: none;
+  max-width: 520px;
 }
 
   .DayPicker-NavBar {
@@ -110,7 +110,7 @@ $calendar-day-size: 30px;
 
       &:hover {
         background-color: $tvn-ash;
-        border: 1px solid $tvn-grey;
+        border: $tvn-stroke;;
       }
       &:active {
         background-color: $tvn-grey;
@@ -124,9 +124,7 @@ $calendar-day-size: 30px;
 /* Default modifiers */
 
 .DayPicker-Day--today {
-  //color: $tvn-green;
-  font-weight: $tvn-font-weight-bold;
-  border: 1px solid $tvn-dark-grey;
+  border: $tvn-accented-stroke;
 }
 
 .DayPicker-Day--disabled {

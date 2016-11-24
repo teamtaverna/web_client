@@ -3,7 +3,7 @@
 
 
 @mixin color-theme-transition {
-  transition: .2s;
+  transition: $tvn-fx-duration;
 }
 
 @mixin tvn-theme-normal {
@@ -44,9 +44,7 @@
     &.tvn.fade.clipped:after, .tvn.fade.clipped:after{
       background-image: $tvn-accented-fade-clip;
     }
-
   }
-
 }
 
 
@@ -95,7 +93,7 @@
   @include sub-header-text($weight: $tvn-font-weight-heavy);
   color: $tvn-black !important;
   &:hover {
-    background-color: $tvn-ash;
-    border: 1px solid $tvn-grey;
+    //background-color: $tvn-ash;
+    //border: 1px solid $tvn-grey;
   }
 }
