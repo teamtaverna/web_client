@@ -87,8 +87,8 @@ body {
   text-shadow: none !important; }
 
 .tvn.page {
-  padding-top: 85px;
-  background-color: #F8F8F8; }
+  background-color: #F8F8F8;
+  padding-top: 90px; }
 
 .tvn.icon {
   display: inline-block;
@@ -125,7 +125,6 @@ body {
     border-radius: 50%;
     background-color: #E4E4E4;
     opacity: 0;
-    z-index: -1;
     pointer-events: none; }
   .tvn.sonar.on {
     background-color: #28905A; }
@@ -230,6 +229,7 @@ body {
   padding: 0 !important; }
 
 .top.fixed.menu, .top.menu .selector:hover .top.fixed.menu {
+  position: fixed !important;
   height: 90px;
   background-color: rgba(255, 255, 255, 0.9);
   border-bottom: 0.5px solid #E4E4E4;
@@ -574,7 +574,8 @@ body {
   box-shadow: 0 1px 10px 0 rgba(34, 36, 38, 0.14);
   overflow: hidden;
   transition: 0.2s;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
   .meals .serving.card .image.wrapper {
     flex: none;
     position: relative;
@@ -638,31 +639,28 @@ body {
     .meals .serving.card .description {
       height: 100%; } }
 
-.main {
-  padding-top: 90px; }
-
-.main + .footer {
-  padding: 60px 0;
+.page.footer {
   transition: 0.2s;
   background-color: #FFFFFF;
+  padding: 60px 0;
   background-color: unset; }
-  .main + .footer, .main + .footer .header {
+  .page.footer, .page.footer .header {
     color: #000000; }
-  .main + .footer .tvn.icon {
+  .page.footer .tvn.icon {
     fill: #000000;
     stroke: #000000; }
-  .main + .footer .tvn.stroke {
+  .page.footer .tvn.stroke {
     background-color: #E4E4E4; }
-  .main + .footer .tvn.fade.clipped:after {
+  .page.footer .tvn.fade.clipped:after {
     background-image: linear-gradient(to right, transparent, #FFFFFF 100%); }
-  .main + .footer, .main + .footer .signature {
+  .page.footer, .page.footer .signature {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-  .main + .footer .signature {
+  .page.footer .signature {
     font-size: 0.8rem; }
-  .main + .footer .signature .icon {
+  .page.footer .signature .icon {
     width: 50px;
     height: 50px;
     margin-bottom: 10px; }

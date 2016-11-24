@@ -1,4 +1,5 @@
 .top.fixed.menu {
+  position: fixed !important;
   height: $tvn-fixed-top-menu-height;
   background-color: transparentize($tvn-white, 0.1);
   border-bottom: $tvn-stroke;

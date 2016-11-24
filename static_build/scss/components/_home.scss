@@ -4,13 +4,10 @@
 @import "meal_section";
 @import "serving_card";
 
-.main {
-  padding-top: $tvn-fixed-top-menu-height;
-}
 
-.main + .footer {
-  padding: 60px 0;
+.page.footer {
   @include tvn-theme-normal;
+  padding: 60px 0;
   background-color: unset;
 
   &, .signature {

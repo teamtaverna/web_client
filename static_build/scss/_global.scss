@@ -47,8 +47,8 @@ body {
 // ===================================================================================
 
 .tvn.page {
-  padding-top: 85px;
   background-color: $tvn-ash;
+  padding-top: $tvn-fixed-top-menu-height;
 }
 
 .tvn.icon {
@@ -94,7 +94,6 @@ body {
     border-radius: 50%;
     background-color: $tvn-grey;
     opacity: 0;
-    z-index: -1;
     pointer-events: none;
   }
   &.on {
