@@ -1,0 +1,11 @@
+.env
+buld
+dist
+coverage
+webpack-stats.json
+npm-debug.log
+.idea/
+.DS_Store
+webpack-assets.json
+npm-debug.log
+node_modules

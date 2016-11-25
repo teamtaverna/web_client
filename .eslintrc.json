@@ -1,0 +1,38 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "es6": true,
+        "mocha": true,
+        "node": true,
+        "browser": true
+    },
+    "installedESLint": true,
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "parser": "babel-eslint",
+    "settings": {
+        "import/resolve": {
+          "moduleDirectory": ["node_modules", "src"]
+        }
+    },
+    "rules": {
+    "import/prefer-default-export": 0,
+       "import/no-duplicates": 0,
+       "import/named": 0,
+       "import/namespace": 0,
+       "import/no-unresolved": 0,
+       "import/no-named-as-default": 2,
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true,
+                "optionalDependencies": false,
+                "peerDependencies": false
+            }
+        ],
+        "react/sort-comp":[2]
+    }
+}
