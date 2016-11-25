@@ -78,7 +78,7 @@
     "svg-loader": "0.0.2"
   },
   "engines": {
-    "node": "0.10.x",
+    "node": "6.9.x",
     "npm": "~6.6"
   }
 }

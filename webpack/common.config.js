@@ -19,7 +19,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   output: {
-    publicPath: isDev ? 'http://localhost:' + (process.env.PORT + 1) + '/assets/': '',
+    publicPath: isDev ? `http://localhost:${+process.env.PORT + 1}/assets/`: '',
     path: path.resolve(__dirname, '../dist/assets'),
     filename: isDev ? '[name].js': '[name].[hash].js',
     chunkFilename: isDev ? '[id].js': '[id].[hash].js'
