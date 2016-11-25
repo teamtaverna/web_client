@@ -8,10 +8,11 @@ $calendar-day-size: 30px;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
+  max-width: 520px;
   padding: 15px $day-picker-padding;
   margin: auto;
   user-select: none;
-  max-width: 520px;
+  outline: none;
 }
 
   .DayPicker-NavBar {

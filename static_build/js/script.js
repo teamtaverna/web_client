@@ -6,22 +6,27 @@ $(() => {
     exclusive: false,
   });
 
-  // initialize semantic ui ratings module:
-  $('.serving.card .ui.rating').rating({
+  // initialize semantic ui ratings:
+  $('.ui.rating').rating({
     maxRating: 5,
     interactive: false,
+  });
+  $('.ui.rating.interactive').rating({
+    interactive: true,
   });
 
   // initialize semantic ui sidebar:
   $('.sidebar')
     .sidebar({
-      context: $('.tvn.page > .main'),
+      context: $('.pushable.content'),
       scrollLock: true,
     })
-    .sidebar('setting', 'transition', 'push');
+    .sidebar('setting', 'transition', 'push')
+    .sidebar('setting', 'mobileTransition', 'push');
 
   // toggle the sidebar when you click a card
-  $('.serving.card').click(() => {
+  // or the sidebar's close button:
+  $('.serving.card, .sidebar .close.button').click(() => {
     $('.sidebar').sidebar('toggle');
   });
 });

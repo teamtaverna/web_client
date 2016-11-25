@@ -4,11 +4,6 @@
 body {
   background-color: $tvn-page-bg-color;
   font-size: $tvn-font-size-regular;
-  font-weight: $tvn-font-weight-regular;
-}
-
-.ui.medium.header {
-  letter-spacing: $tvn-letter-spacing-medium-header;
 }
 
 .ui.sub.header {
@@ -19,6 +14,10 @@ body {
 .tvn.sub.header {
   font-size: $tvn-font-size-small;
   letter-spacing: $tvn-letter-spacing-sub-header;
+}
+
+.ui.medium.header {
+  letter-spacing: $tvn-letter-spacing-medium-header;
 }
 
 .ui.menu .item:before {
@@ -42,14 +41,36 @@ body {
   }
 }
 
+.ui.form {
+  .field > label {
+    @include sub-header-text($tvn-font-weight-bold);
+  }
+  input[type='text']:focus, textarea:focus {
+    border: $tvn-accented-soft-stroke;
+  }
+}
+
+.ui[class*="very wide"].right.sidebar {
+  width: 420px;
+
+  &.visible~.fixed,
+  &.visible~.pusher {
+    transform: translate3d(-420px,0,0);
+  }
+
+  @media only screen and (max-width: 480px) {
+    & {
+      width: 100%;
+    }
+    &.visible~.fixed,
+    &.visible~.pusher {
+      transform: translate3d(-100%,0,0);
+    }
+  }
+}
 
 // COMMON COMPONENTS:
 // ===================================================================================
-
-.tvn.page {
-  background-color: $tvn-ash;
-  padding-top: $tvn-fixed-top-menu-height;
-}
 
 .tvn.icon {
   display: inline-block;
@@ -117,12 +138,16 @@ body {
   }
   .toggle {
     margin-left: 20px;
+    transition: $tvn-fx-duration;
     .tvn.icon {
       flex: none;
       width: $toggle-dropdown-icon-size;
       height: $toggle-dropdown-icon-size;
       opacity: $toggle-dropdown-icon-opacity;
     }
+  }
+  &.active .toggle {
+    transform: rotate(180deg);
   }
   .tvn.horizontal.stroke {
     width: 100%;

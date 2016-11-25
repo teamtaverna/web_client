@@ -27,7 +27,7 @@
     .image {
       background-size: cover;
       background-position: center center;
-      transition: 0.3s;
+      transition: $tvn-fx-duration;
     }
     &:after {
       content: '';
@@ -39,10 +39,11 @@
     }
   }
   .content {
-    padding: 15px;
-    padding-left: 20px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    padding-left: 20px;
   }
   .header {
     margin: 0;
@@ -69,7 +70,10 @@
   }
 
   &:hover {
-    border-color: transparentize($tvn-accent-color, 0.4);
+    border: $tvn-accented-soft-stroke;
+    .image.wrapper .image {
+      transform: scale(1.05);
+    }
   }
   &:active {
     box-shadow: $tvn-accented-box-shadow;
@@ -99,6 +103,5 @@
       height: 100%;
     }
   }
-
 
 }

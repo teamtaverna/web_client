@@ -25,18 +25,23 @@
 
   .courses {
     width: 100%;
+  }
+  .tvn.collapsible.title {
+    margin: 15px 10%;
+  }
+  .tvn.collapsible.title .toggle {
+    position: absolute;
+    left: 100%;
+  }
 
-    .tvn.collapsible.title {
-      margin: 15px 10%;
 
-      .toggle {
-        position: absolute;
-        left: 100%;
-        transition: $tvn-fx-duration;
-      }
-      &.active .toggle {
-        transform: rotate(180deg);
-      }
+  // media queries:
+  @media only screen and (max-width: 380px) {
+    & > .vertical.stroke {
+      height: 60px;
+    }
+    .tvn.collapsible.title .toggle {
+        margin-left: 8px;
     }
   }
 }
