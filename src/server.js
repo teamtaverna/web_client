@@ -14,7 +14,7 @@ app.get('*', (req, res) => {
   res.status(200).send('<!doctype html>\n' +
   ReactDOM.renderToString(<Html assets={webpackIsomorphicTools.assets()} component={sampleComponent}/>)); }
 );
-app.listen(+process.env.PORT, (err) => {
+app.listen(process.env.PORT || 5000, (err) => {
   if (err) {
     console.error(err, 'this is the error', process.env.PORT);
   }
