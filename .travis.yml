@@ -8,6 +8,7 @@ install:
 
 script:
   - npm test
+  - npm build
 
 notifications:
   slack: teamtaverna:iP55LweubU8UOBgu9e0cTeED
