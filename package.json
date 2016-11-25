@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "PORT=4000 NODE_ENV=development node ./webpack/dev.server.js & PORT=4000 NODE_ENV=development node ./bin/server.js",
-    "postinstall": "rsync pre-commit .git/hooks && chmod 755 .git/hooks/pre-commit",
+    "postinstall": "[ \"$NODE_ENV\" == production ] && exit 0; rsync pre-commit .git/hooks && chmod 755 .git/hooks/pre-commit",
     "pre-lint": "(cd \"./node_modules/\" && pwd)",
     "preinstall": "npm prune",
     "prebuild": "rm -rf dist",
