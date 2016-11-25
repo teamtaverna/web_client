@@ -1,7 +1,7 @@
 {
   "name": "taverna_web_client",
   "version": "1.0.0",
-  "description": "The admin interface for Tarvena app",
+  "description": "The admin interface for Tarvena app ",
   "main": "index.js",
   "bin": {
     "taverna_web_client": "server.js"
