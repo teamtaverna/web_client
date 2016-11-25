@@ -43,6 +43,7 @@
     "enzyme": "^2.4.1",
     "eslint": "^3.8.0",
     "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "istanbul": "^0.4.5",
     "jsdom": "^9.6.0",
@@ -56,6 +57,7 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2",
+    "webpack-isomorphic-tools": "^2.6.3",
     "webpack-merge": "^0.14.1"
   },
   "devDependencies": {
@@ -69,13 +71,11 @@
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
-    "extract-text-webpack-plugin": "^1.0.1",
     "piping": "^1.0.0-rc.4",
     "postcss-loader": "^1.1.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
-    "svg-loader": "0.0.2",
-    "webpack-isomorphic-tools": "^2.6.3"
+    "svg-loader": "0.0.2"
   },
   "engines": {
     "node": "0.10.x",
