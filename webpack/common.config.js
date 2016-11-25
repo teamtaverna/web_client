@@ -9,7 +9,6 @@ const development = (process.env.NODE_ENV || 'development') === 'development';
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const cssNames = development ? '[name].css' : '[name].[hash].css';
 const extractCSS = new ExtractTextPlugin(cssNames);
-const autoprefixer = require('autoprefixer');
 
 const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
@@ -20,7 +19,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   output: {
-    publicPath: isDev ? `http://localhost:${+process.env.PORT + 1}/assets/`: '',
+    publicPath: isDev ? 'http://localhost:' + (process.env.PORT + 1) + '/assets/': '',
     path: path.resolve(__dirname, '../dist/assets'),
     filename: isDev ? '[name].js': '[name].[hash].js',
     chunkFilename: isDev ? '[id].js': '[id].[hash].js'
