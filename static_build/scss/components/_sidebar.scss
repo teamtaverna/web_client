@@ -2,7 +2,7 @@
 .pushable.content > .sidebar {
   position: relative;
   width: 420px;
-  background-color: $tvn-white;
+  //background-color: $tvn-white;
 
   $image-height: 20vh;
   $gutter-size: 25px;
@@ -18,6 +18,7 @@
     z-index: -1;
 
     &:after {
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;

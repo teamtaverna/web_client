@@ -76,6 +76,7 @@
   .dropdown.toggle {
     margin-right: 10%;
     z-index: 1;
+
     .tvn.icon {
       width: $toggle-dropdown-icon-size;
       height: $toggle-dropdown-icon-size;
@@ -138,6 +139,7 @@
     padding: 0 10% !important;
     border: 0;
     border-top: $tvn-stroke;
+    cursor: pointer;
 
     .header, .description {
       margin: 0;

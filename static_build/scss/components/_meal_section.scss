@@ -22,16 +22,21 @@
     font-size: 1.5em;
     text-transform: uppercase;
   }
-
   .courses {
     width: 100%;
   }
   .tvn.collapsible.title {
     margin: 15px 10%;
-  }
-  .tvn.collapsible.title .toggle {
-    position: absolute;
-    left: 100%;
+
+    .toggle {
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.active .toggle {
+      transform: translateY(-50%) rotate(180deg);
+    }
   }
 
 

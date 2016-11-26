@@ -1,7 +1,7 @@
 .top.fixed.menu {
   position: fixed !important;
   height: $tvn-fixed-top-menu-height;
-  background-color: transparentize($tvn-white, 0.1);
+  background-color: rgba($tvn-white, 0.9);
   border-bottom: $tvn-stroke;
   box-shadow: $tvn-component-box-shadow;
 
@@ -20,6 +20,7 @@
       flex: 0;
       margin: 0;
       width: auto;
+      min-width: 3.5em;
       height: 3.5em;
     }
     .name {

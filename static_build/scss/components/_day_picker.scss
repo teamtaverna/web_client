@@ -20,6 +20,8 @@ $calendar-day-size: 30px;
     justify-content: space-between;
     align-items: center;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     height: $calendar-row-height;
     padding: 0 $day-picker-padding;

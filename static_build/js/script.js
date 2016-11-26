@@ -1,6 +1,6 @@
-const $ = window.$;
+/* eslint-disable */
 
-$(() => {
+$(function() {
   // initialize semantic ui accordion module:
   $('.ui.accordion').accordion({
     exclusive: false,
@@ -26,7 +26,7 @@ $(() => {
 
   // toggle the sidebar when you click a card
   // or the sidebar's close button:
-  $('.serving.card, .sidebar .close.button').click(() => {
+  $('.serving.card, .sidebar .close.button').click(function() {
     $('.sidebar').sidebar('toggle');
   });
 });

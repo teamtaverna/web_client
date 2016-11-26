@@ -139,6 +139,7 @@ body {
   .toggle {
     margin-left: 20px;
     transition: $tvn-fx-duration;
+
     .tvn.icon {
       flex: none;
       width: $toggle-dropdown-icon-size;
