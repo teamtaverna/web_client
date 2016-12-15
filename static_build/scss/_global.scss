@@ -1,0 +1,266 @@
+
+// RESET AND SEMANTIC UI OVERRIDES:
+// ===================================================================================
+body {
+  background-color: $tvn-page-bg-color;
+  font-size: $tvn-font-size-regular;
+}
+
+.ui.sub.header {
+  font-size: $tvn-font-size-small;
+  letter-spacing: $tvn-letter-spacing-sub-header;
+}
+
+.tvn.sub.header {
+  font-size: $tvn-font-size-small;
+  letter-spacing: $tvn-letter-spacing-sub-header;
+}
+
+.ui.medium.header {
+  letter-spacing: $tvn-letter-spacing-medium-header;
+}
+
+.ui.menu .item:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background: $tvn-grey;
+}
+
+.ui.basic.button {
+  @include basic-button;
+}
+
+.ui.star.rating {
+  .icon.active:not(.selected) {
+    color: $tvn-orange !important;
+    text-shadow: none !important;
+  }
+}
+
+.ui.form {
+  .field > label {
+    @include sub-header-text($tvn-font-weight-bold);
+  }
+  input[type='text']:focus, textarea:focus {
+    border: $tvn-accented-soft-stroke;
+  }
+}
+
+.ui[class*="very wide"].right.sidebar {
+  width: 420px;
+
+  &.visible~.fixed,
+  &.visible~.pusher {
+    transform: translate3d(-420px,0,0);
+  }
+
+  @media only screen and (max-width: 480px) {
+    & {
+      width: 100%;
+    }
+    &.visible~.fixed,
+    &.visible~.pusher {
+      transform: translate3d(-100%,0,0);
+    }
+  }
+}
+
+// COMMON COMPONENTS:
+// ===================================================================================
+
+.tvn.icon {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.tvn[class*="vertical stroke"] {
+  width: 0 !important;
+  border-left: 1px solid $tvn-grey;
+}
+
+.tvn[class*="horizontal stroke"] {
+  height: 0 !important;
+  border-top: 1px solid $tvn-grey;
+}
+
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+.tvn.sonar{
+  position: relative;
+  width: 9px;
+  height: 9px;
+  background-color: $tvn-grey;
+  border-radius: 50%;
+
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $tvn-grey;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.on {
+    background-color: $tvn-accent-color;
+    .wave {
+      background-color: $tvn-accent-color;
+      animation: sonarWave 2s linear infinite;
+    }
+  }
+}
+
+.tvn.collapsible.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  .header {
+    flex: none;
+    margin: 0 20px;
+  }
+  .toggle {
+    margin-left: 20px;
+    transition: $tvn-fx-duration;
+
+    .tvn.icon {
+      flex: none;
+      width: $toggle-dropdown-icon-size;
+      height: $toggle-dropdown-icon-size;
+      opacity: $toggle-dropdown-icon-opacity;
+    }
+  }
+  &.active .toggle {
+    transform: rotate(180deg);
+  }
+  .tvn.horizontal.stroke {
+    width: 100%;
+  }
+}
+
+.tvn.link {
+  color: $tvn-black;
+
+  &:active, &:hover, &:focus {
+    color: $tvn-accent-color;
+  }
+}
+
+// UTILITY AND EFFECT CLASSES:
+// ===================================================================================
+
+.tvn.weight{
+  &.thin {
+    font-weight: $tvn-font-weight-thin;
+  }
+  &.light {
+    font-weight: $tvn-font-weight-light;
+  }
+  &.regular {
+    font-weight: $tvn-font-weight-regular;
+  }
+  &.bold {
+    font-weight: $tvn-font-weight-bold;
+  }
+  &.heavy {
+    font-weight: $tvn-font-weight-heavy;
+  }
+}
+
+.tvn.positioning {
+  position: relative;
+
+  & > .positioned {
+    position: absolute;
+
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+    &.center {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &.top {
+      top: 0;
+    }
+    &.bottom {
+      bottom: 0;
+    }
+    &.middle {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.xstretch {
+      left: 0;
+      right: 0;
+    }
+    &.ystretch {
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.tvn[class*='fade clipped'] {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    content: " ";
+    pointer-events: none;
+  }
+
+  &:not(.vertical):after {
+    top: 0;
+    right: 0;
+    width: 30%;
+    max-width: 100px;
+    min-width: 30px;
+    height: 100%;
+  }
+  &.vertical:after {
+    left: 0;
+    bottom: 0;
+    height: 30%;
+    max-height: 100px;
+    min-height: 30px;
+    width: 100%;
+  }
+  &:not(.accented):not(.vertical):after {
+    background-image: $tvn-fade-clip;
+  }
+  &.accented:not(.vertical):after {
+    background-image: $tvn-accented-fade-clip;
+  }
+  &.vertical:not(.accented):after {
+    background-image: $tvn-vertical-fade-clip;
+  }
+  &.vertical.accent:after {
+    background-image: $tvn-vertical-accented-fade-clip;
+  }
+}
+
+.tvn[class*='no padding'] {
+  padding: 0 !important;
+}

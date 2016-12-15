@@ -1,0 +1,21 @@
+{
+  "name": "web_client_draft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/script.js",
+  "local-web-server": {
+    "port": 8081,
+    "forbid": "*.json"
+  },
+  "scripts": {
+    "start": "ws"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "local-web-server": "^1.2.6"
+  }
+}

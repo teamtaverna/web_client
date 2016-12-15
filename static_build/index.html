@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- title -->
+    <title>Taverna - Menu</title>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- app -->
+    <div id="app">
+      <div id="home page" class="tvn page">
+
+        <!-- fixed menu -->
+        <div class="ui top fixed menu grid">
+
+          <div class="eight wide mobile
+                        four wide tablet
+                        six wide computer
+                        left floated column
+                        tvn no padding">
+            <!-- brand -->
+            <div class="tvn fade clipped brand">
+              <img class="logo" src="./img/logo.svg">
+              <h1 class="name
+                           ui large header
+                           ">Taverna Inc.</h1>
+            </div> <!-- end brand -->
+          </div>
+
+          <div class="eight wide mobile
+                        twelve wide tablet
+                        ten wide computer
+                        right floated column
+                        tvn no padding">
+            <!-- selectors -->
+            <div class="selectors">
+
+              <!-- date selector -->
+              <div class="fitted item selector
+                            ui simple dropdown">
+                <!-- tab -->
+                <div class="tab
+                              tvn themed
+                              positioning">
+                  <div class="icon section">
+                    <div class="tvn positioning
+                                  calendar icon header">
+                      <svg class="tvn icon"><use xlink:href="#icon-calendar"></use></svg>
+                        <span class="ui medium header number
+                                     tvn center bottom positioned">26</span>
+                    </div>
+                    <div class="ui mobile only sub header">Aug</div>
+                  </div>
+
+                  <div class="mobile hidden info section
+                                 tvn fade clipped">
+                    <h3 class="ui medium header">Friday</h3>
+                    <div class="ui sub header
+                                  tvn regular weight">August 26, 2016</div>
+                  </div>
+
+                  <div class="dropdown toggle
+                                tablet or lower hidden
+                                tvn right middle positioned
+                                ">
+                    <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                  </div>
+                </div> <!-- end tab -->
+
+                <!-- dropdown menu -->
+                <div class="ui dropdown menu">
+                  <div class="content">
+                    <!-- DayPicker (as will be rendered by the component) -->
+                    <div class="DayPicker DayPicker--en" role="application" tabindex="0">
+                      <div class="DayPicker-NavBar">
+                          <span class="DayPicker-NavButton DayPicker-NavButton--prev" role="button">
+                            <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                          </span>
+                          <span class="DayPicker-NavButton DayPicker-NavButton--next" role="button">
+                            <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                          </span>
+                      </div>
+                      <div class="DayPicker-Month">
+                        <div class="DayPicker-Caption" role="heading">
+                          August 2016
+                        </div>
+                        <div class="DayPicker-Weekdays" role="rowgroup">
+                          <div class="DayPicker-WeekdaysRow" role="columnheader">
+                            <div class="DayPicker-Weekday">
+                              <abbr title="Sunday">Su</abbr>
+                            </div>
+                            <div class="DayPicker-Weekday">
+                              <abbr title="Monday">Mo</abbr>
+                            </div>
+                            <div class="DayPicker-Weekday">
+                              <abbr title="Tuesday">Tu</abbr>
+                            </div>
+                            <div class="DayPicker-Weekday">
+                              <abbr title="Wednesday">We</abbr>
+                            </div>
+                            <div class="DayPicker-Weekday">
+                              <abbr title="Thursday">Th</abbr>
+                            </div>
+                            <div class="DayPicker-Weekday">
+                              <abbr title="Friday">Fr</abbr>
+                            </div>
+                            <div class="DayPicker-Weekday">
+                              <abbr title="Saturday">Sa</abbr>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="DayPicker-Body" role="grid">
+                          <div class="DayPicker-Week" role="gridcell">
+                            <div aria-disabled="true" aria-label="Sun Jul 31 2016" aria-selected="false" class="DayPicker-Day DayPicker-Day--outside" role="gridcell" tabindex="-1">31</div>
+                            <div aria-disabled="false" aria-label="Mon Aug 01 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="0">1</div>
+                            <div aria-disabled="false" aria-label="Tue Aug 02 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">2</div>
+                            <div aria-disabled="false" aria-label="Wed Aug 03 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">3</div>
+                            <div aria-disabled="false" aria-label="Thu Aug 04 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">4</div>
+                            <div aria-disabled="false" aria-label="Fri Aug 05 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">5</div>
+                            <div aria-disabled="false" aria-label="Sat Aug 06 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">6</div>
+                          </div>
+                          <div class="DayPicker-Week" role="gridcell">
+                            <div aria-disabled="false" aria-label="Sun Aug 07 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">7</div>
+                            <div aria-disabled="false" aria-label="Mon Aug 08 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">8</div>
+                            <div aria-disabled="false" aria-label="Tue Aug 09 2016" aria-selected="false" class="DayPicker-Day DayPicker-Day--today" role="gridcell" tabindex="-1">9</div>
+                            <div aria-disabled="false" aria-label="Wed Aug 10 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">10</div>
+                            <div aria-disabled="false" aria-label="Thu Aug 11 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">11</div>
+                            <div aria-disabled="false" aria-label="Fri Aug 12 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">12</div>
+                            <div aria-disabled="false" aria-label="Sat Aug 13 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">13</div>
+                          </div>
+                          <div class="DayPicker-Week" role="gridcell">
+                            <div aria-disabled="false" aria-label="Sun Aug 14 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">14</div>
+                            <div aria-disabled="false" aria-label="Mon Aug 15 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">15</div>
+                            <div aria-disabled="false" aria-label="Tue Aug 16 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">16</div>
+                            <div aria-disabled="false" aria-label="Wed Aug 17 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">17</div>
+                            <div aria-disabled="false" aria-label="Thu Aug 18 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">18</div>
+                            <div aria-disabled="false" aria-label="Fri Aug 19 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">19</div>
+                            <div aria-disabled="false" aria-label="Sat Aug 20 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">20</div>
+                          </div>
+                          <div class="DayPicker-Week" role="gridcell">
+                            <div aria-disabled="false" aria-label="Sun Aug 21 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">21</div>
+                            <div aria-disabled="false" aria-label="Mon Aug 22 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">22</div>
+                            <div aria-disabled="false" aria-label="Tue Aug 23 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">23</div>
+                            <div aria-disabled="false" aria-label="Wed Aug 24 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">24</div>
+                            <div aria-disabled="false" aria-label="Thu Aug 25 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">25</div>
+                            <div aria-disabled="false" aria-label="Fri Aug 26 2016" aria-selected="false" class="DayPicker-Day DayPicker-Day--selected" role="gridcell" tabindex="-1">26</div>
+                            <div aria-disabled="false" aria-label="Sat Aug 27 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">27</div>
+                          </div>
+                          <div class="DayPicker-Week" role="gridcell">
+                            <div aria-disabled="false" aria-label="Sun Aug 28 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">28</div>
+                            <div aria-disabled="false" aria-label="Mon Aug 29 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">29</div>
+                            <div aria-disabled="false" aria-label="Tue Aug 30 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">30</div>
+                            <div aria-disabled="false" aria-label="Wed Aug 31 2016" aria-selected="false" class="DayPicker-Day" role="gridcell" tabindex="-1">31</div>
+                            <div aria-disabled="true" aria-label="Thu Sep 1 2016" aria-selected="false" class="DayPicker-Day DayPicker-Day--outside" role="gridcell" tabindex="-1">1</div>
+                            <div aria-disabled="true" aria-label="Fri Sep 2 2016" aria-selected="false" class="DayPicker-Day DayPicker-Day--outside" role="gridcell" tabindex="-1">2</div>
+                            <div aria-disabled="true" aria-label="Sat Sep 3 2016" aria-selected="false" class="DayPicker-Day DayPicker-Day--outside" role="gridcell" tabindex="-1">3</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- end DayPicker -->
+                  </div>
+                  <div class="footer">
+                    <button class="ui basic button">Show Today</button>
+                  </div>
+                </div> <!-- end dropdown menu -->
+              </div><!-- end date selector -->
+
+              <!-- timetable selector -->
+              <div class="fitted item selector
+                            ui simple dropdown">
+                <!-- tab -->
+                <div class="tab
+                              tvn themed
+                              positioning">
+                  <div class="icon section">
+                    <div class="icon header">
+                      <svg class="tvn icon"><use xlink:href="#icon-timetable"></use></svg>
+                    </div>
+                    <div class="ui mobile only sub header">LOS-A</div>
+                  </div>
+
+                  <div class="mobile hidden info section
+                                tvn fade clipped">
+                    <h3 class="ui medium header">Lagos General</h3>
+                    <div class="ui sub header
+                                  tvn regular weight">Timetable</div>
+                  </div>
+
+                  <div class="dropdown toggle
+                                tablet or lower hidden
+                                tvn right middle positioned
+                                ">
+                    <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                  </div>
+                </div> <!-- end tab -->
+
+                <!-- dropdown menu -->
+                <div class="ui dropdown menu">
+                  <div class="content list">
+                    <div class="tvn fade clipped item">
+                      <h3 class="ui medium header">Lagos General</h3>
+                      <div class="description">Lagos General Staff. LOS-A.</div>
+                    </div>
+                    <div class="tvn fade clipped item">
+                      <h3 class="ui medium header">Lagos LT</h3>
+                      <div class="description">Akpos & Sons Lagos Leadership Team. LOS-B</div>
+                    </div>
+                    <div class="tvn fade clipped item">
+                      <h3 class="ui medium header">Nairobi Dojo</h3>
+                      <div class="description">Akpos & Sons Kenya Dojo Menu. NRB-1</div>
+                    </div>
+                    <div class="tvn fade clipped item">
+                      <h3 class="ui medium header">Nairobi LT</h3>
+                      <div class="description">Akpos & Sons Kenya Dojo Menu. NRB-2</div>
+                    </div>
+                  </div>
+                </div> <!-- end dropdown menu -->
+              </div><!-- end timetbale selector -->
+
+              <!-- vendor selector -->
+              <div class="fitted item selector
+                            ui simple dropdown">
+                <!-- tab -->
+                <div class="tab
+                              tvn themed
+                              positioning
+                              ">
+                  <div class="icon section">
+                    <div class="icon header">
+                      <svg class="tvn icon"><use xlink:href="#icon-vendor"></use></svg>
+                    </div>
+                    <div class="ui mobile only sub header">MPC</div>
+                  </div>
+
+                  <div class="mobile hidden info section
+                                tvn fade clipped">
+                    <h3 class="ui medium header">Mama Peace Catering Services</h3>
+                    <div class="ui sub header
+                                  tvn regular weight">Vendor</div>
+                  </div>
+
+                  <div class="dropdown toggle
+                                tablet or lower hidden
+                                tvn right middle positioned
+                                ">
+                    <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                  </div>
+                </div> <!-- end tab -->
+
+                <!-- dropdown menu -->
+                <div class="ui dropdown menu">
+                  <div class="content list">
+                    <div class="tvn fade clipped item">
+                      <h3 class="ui medium header">Mama Peace Catering Services</h3>
+                      <div class="description">Cafeteria Management</div>
+                    </div>
+                    <div class="tvn fade clipped item">
+                      <h3 class="ui medium header">Wade Confectioneries</h3>
+                      <div class="description">Pastries Vendor</div>
+                    </div>
+                  </div>
+                </div> <!-- end dropdown menu -->
+              </div><!-- end vendor selector -->
+
+            </div> <!-- selectors -->
+          </div>
+
+        </div> <!-- end fixed top menu -->
+
+        <!-- content -->
+        <div class="pushable content">
+
+          <!-- sidebar -->
+          <div class="ui very wide vertical right sidebar">
+            <div class="image" style="background-image: url('img/ofada_lg.jpg')"></div>
+            <div class="scroll wrapper">
+              <div class="buffer"></div>
+              <div class="content">
+                <div class="headers">
+                  <div class="ui sub header">Option 1</div>
+                  <div class="ui large header">Ofada Rice garnished with Fish Stew and Vegetable Salad</div>
+                  <div class="meta">Served by <span class="tvn weight bold">Mama Peace Catering Services</span></div>
+                  <div class="ui huge star rating" data-rating="4"></div>
+                </div> <!-- end headers -->
+                <div class="ui accordion">
+
+                  <div class="tvn collapsible title active">
+                    <div class="tvn horizontal stroke"></div>
+                    <div class="ui sub header">Description</div>
+                    <div class="tvn horizontal stroke"></div>
+                    <div class="toggle"><svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg></div>
+                  </div> <!-- end title -->
+                  <div class="content active">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<br>
+                      Consectetur  ---     24 mCal<br>
+                      Hhsmodfdr   ---     6.8 mCal<br>
+                  </div> <!-- end content -->
+
+                  <div class="tvn collapsible title active">
+                    <div class="tvn horizontal stroke"></div>
+                    <div class="ui sub header">Add a Review</div>
+                    <div class="tvn horizontal stroke"></div>
+                    <div class="toggle"><svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg></div>
+                  </div> <!-- end title -->
+                  <div class="content active">
+                    <div id="review-form">
+                      <p>How do you rate this meal? *</p>
+                      <div class="ui massive star interactive rating" data-rating="0"></div>
+                      <div class="ui form">
+                        <div class="comment field">
+                          <label>Comments</label>
+                          <textarea rows="3" placeholder="Optional. e.g very delicious. :)"></textarea>
+                        </div>
+                        <button class="ui basic button" type="submit">Submit Review</button>
+                      </div>
+                    </div>
+                  </div> <!-- end content -->
+
+                  <div class="tvn collapsible title active">
+                    <div class="tvn horizontal stroke"></div>
+                    <div class="ui sub header">All Reviews (23)</div>
+                    <div class="tvn horizontal stroke"></div>
+                    <div class="toggle"><svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg></div>
+                  </div> <!-- end title -->
+                  <div class="content active">
+                    <div id="reviews-list" class="ui items">
+
+                      <div class="item">
+                        <div class="content">
+                          <a class="header">Susan Onibalusi</a>
+                          <div class="right floated meta">Feb 23, 2016. 9:15 am</div>
+                          <div class="ui star rating" data-rating="3"></div>
+                          <div class="description">
+                            <p>The stew made sense but I felt the chicken was not cooked properly. It was so hard! E be like rubber :(</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="content">
+                          <a class="header">Tony Nwachukwu</a>
+                          <div class="right floated meta">Feb 21, 2016. 8:13 pm</div>
+                          <div class="ui star rating" data-rating="1"></div>
+                          <div class="description">
+                            <p>I actually enjoyed the taste of that sweet sauce that was served with the ofada, only for me to purge seriously when I got home.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="content">
+                          <a class="header">Torhee Chirou</a>
+                          <div class="right floated meta">Feb 21, 2016. 2:15 pm</div>
+                          <div class="ui star rating" data-rating="4"></div>
+                          <div class="description">
+                            <p>Best ofada rice I have tasted in a while. Big thumbs up to Mama Peace and co. Keep it up!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="content">
+                          <a class="header">Anonymous</a>
+                          <div class="right floated meta">Feb 21, 2016. 1:26 pm</div>
+                          <div class="ui star rating" data-rating="1"></div>
+                          <div class="description">
+                            <p>This is food poisoning and something must be done about it!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="content">
+                          <a class="header">Hauwa Ibrahim</a>
+                          <div class="right floated meta">Feb 21, 2016. 9:15 am</div>
+                          <div class="ui star rating" data-rating="4"></div>
+                          <div class="description"></div>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div class="content">
+                          <a class="header">Mabel Rosenberg</a>
+                          <div class="right floated meta">Feb 21, 2016. 9:15 am</div>
+                          <div class="ui star rating" data-rating="3"></div>
+                          <div class="description">
+                            <p>The meat was too hard. Not well cooked. The rice and ofada stew was top just out of this world though.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- end content -->
+
+                </div> <!-- end accordion -->
+              </div>
+            </div>
+            <button class="close button">
+              <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+            </button>
+          </div> <!-- end sidebar -->
+
+          <div class="pusher">
+            <div class="main">
+
+              <!-- meals -->
+              <div class="ui meals container">
+                <div class="meal section">
+
+                  <div class="tvn vertical stroke"></div>
+                  <div class="tvn sonar on">
+                    <div class="wave"></div>
+                  </div>
+                  <div class="ui schedule sub header">7:00 - 8:30 AM</div>
+                  <div class="ui title header">Breakfast</div>
+
+                  <div class="ui courses accordion">
+
+                    <div class="tvn collapsible title active">
+                      <div class="tvn horizontal stroke"></div>
+                      <div class="ui sub header">Main Course</div>
+                      <div class="tvn horizontal stroke"></div>
+                      <div class="toggle">
+                        <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                      </div>
+                    </div> <!-- end course title -->
+                    <div class="content active">
+                      <div class="ui grid">
+
+                        <div class="sixteen wide mobile column
+                                      sixteen wide tablet column
+                                      eight wide computer column
+                                      eight wide large screen column">
+                          <div class="serving card">
+                            <div class="image wrapper">
+                              <div class="image" style="background-image: url('img/eggs.jpg')"></div>
+                            </div>
+                            <div class="content">
+                              <div class="ui sub header">Option 1</div>
+                              <div class="ui medium header">Bread and Scrambled Eggs</div>
+                              <div class="tvn vertical fade clipped description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid idunt.<br>Consectetur  ---   26 mCal
+                              </div>
+                              <div class="meta">
+                                Served by <span class="tvn weight bold">Mama Peace Catering Services</span>
+                              </div>
+                              <div class="footer options">
+                                <div class="ui huge star rating" data-rating="3"></div>
+                                <div class="ui right floated basic button">Add Review</div>
+                              </div>
+                            </div>
+                          </div> <!-- serving card -->
+                        </div><!-- end column-->
+
+                        <div class="sixteen wide mobile column
+                                      sixteen wide tablet column
+                                      eight wide computer column
+                                      eight wide large screen column">
+                          <div class="serving card">
+                            <div class="image wrapper">
+                              <div class="image" style="background-image: url('img/yam.jpg')"></div>
+                            </div>
+                            <div class="content">
+                              <div class="ui sub header">Option 2</div>
+                              <div class="ui medium header">Yam and Sweet Potatoes garnished with   Fish Stew </div>
+                              <div class="tvn vertical fade clipped description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid idunt.<br>Consectetur  ---   26 mCal
+                              </div>
+                              <div class="meta">
+                                Served by <span class="tvn weight bold">Mama Peace Catering Services</span>
+                              </div>
+                              <div class="footer options">
+                                <div class="ui huge star rating" data-rating="4"></div>
+                                <div class="ui right floated basic button">Add Review</div>
+                              </div>
+                            </div>
+                          </div> <!-- serving card -->
+                        </div><!-- end column-->
+
+                        <div class="sixteen wide mobile column
+                                      sixteen wide tablet column
+                                      eight wide computer column
+                                      eight wide large screen column">
+                          <div class="serving card">
+                            <div class="image wrapper">
+                              <div class="image" style="background-image: url('img/cereal.jpg')"></div>
+                            </div>
+                            <div class="content">
+                              <div class="ui sub header">Option 3</div>
+                              <div class="ui medium header">Cereal: Golden Morn/Cornflakes </div>
+                              <div class="tvn vertical fade clipped description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid idunt.<br>Consectetur  ---   26 mCal
+                              </div>
+                              <div class="meta">
+                                Served by <span class="tvn weight bold">Mama Peace Catering Services</span>
+                              </div>
+                              <div class="footer options">
+                                <div class="ui huge star rating" data-rating="5"></div>
+                                <div class="ui right floated basic button">Add Review</div>
+                              </div>
+                            </div>
+                          </div> <!-- serving card -->
+                        </div><!-- end column-->
+
+                        <div class="sixteen wide mobile column
+                                      sixteen wide tablet column
+                                      eight wide computer column
+                                      eight wide large screen column">
+                          <div class="serving card">
+                            <div class="image wrapper">
+                              <div class="image" style="background-image: url('img/apples.jpg')"></div>
+                            </div>
+                            <div class="content">
+                              <div class="ui sub header">Option 3</div>
+                              <div class="ui medium header">Fruits: Apples</div>
+                              <div class="tvn vertical fade clipped description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid idunt.<br>Consectetur  ---   26 mCal
+                              </div>
+                              <div class="meta">
+                                Served by <span class="tvn weight bold">Mama Peace Catering Services</span>
+                              </div>
+                              <div class="footer options">
+                                <div class="ui huge star rating" data-rating="5"></div>
+                                <div class="ui right floated basic button">Add Review</div>
+                              </div>
+                            </div>
+                          </div> <!-- serving card -->
+                        </div><!-- end column-->
+
+                      </div> <!-- end cards -->
+                    </div> <!-- end course content -->
+
+                  </div> <!-- end courses -->
+
+                  <div class="tvn horizontal stroke"></div>
+                </div> <!-- end meal section -->
+                <div class="meal section">
+
+                  <div class="tvn vertical stroke"></div>
+                  <div class="tvn sonar">
+                    <div class="wave"></div>
+                  </div>
+                  <div class="ui schedule sub header">7:00 - 8:30 AM</div>
+                  <div class="ui title header">Lunch</div>
+
+                  <div class="ui courses accordion">
+
+                    <div class="tvn collapsible title active">
+                      <div class="tvn horizontal stroke"></div>
+                      <div class="ui sub header">Main Course</div>
+                      <div class="tvn horizontal stroke"></div>
+                      <div class="toggle">
+                        <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                      </div>
+                    </div> <!-- end course title -->
+                    <div class="content active">
+                      <div class="ui grid">
+
+                        <div class="sixteen wide mobile column
+                                      sixteen wide tablet column
+                                      eight wide computer column
+                                      eight wide large screen column">
+                          <div class="serving card">
+                            <div class="image wrapper">
+                              <div class="image" style="background-image: url('img/afang.jpg')"></div>
+                            </div>
+                            <div class="content">
+                              <div class="ui sub header">Option 1</div>
+                              <div class="ui medium header">Afang Soup and Goat Meat with Semovita</div>
+                              <div class="tvn vertical fade clipped description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid idunt.<br>Consectetur  ---   26 mCal
+                              </div>
+                              <div class="meta">
+                                Served by <span class="tvn weight bold">Mama Peace Catering Services</span>
+                              </div>
+                              <div class="footer options">
+                                <div class="ui huge star rating" data-rating="3"></div>
+                                <div class="ui right floated basic review button">Add Review</div>
+                              </div>
+                            </div>
+                          </div> <!-- serving card -->
+                        </div><!-- end column-->
+
+                        <div class="sixteen wide mobile column
+                                      sixteen wide tablet column
+                                      eight wide computer column
+                                      eight wide large screen column">
+                          <div class="serving card">
+                            <div class="image wrapper">
+                              <div class="image" style="background-image: url('img/ofada.jpg')"></div>
+                            </div>
+                            <div class="content">
+                              <div class="ui sub header">Option 2</div>
+                              <div class="ui medium header">Ofada Rice garnished with Fish Stew and Vegetable Salad</div>
+                              <div class="tvn vertical fade clipped description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid idunt.<br>Consectetur  ---   26 mCal
+                              </div>
+                              <div class="meta">
+                                Served by <span class="tvn weight bold">Mama Peace Catering Services</span>
+                              </div>
+                              <div class="footer options">
+                                <div class="ui huge star rating" data-rating="4"></div>
+                                <div class="ui right floated basic button">Add Review</div>
+                              </div>
+                            </div>
+                          </div> <!-- serving card -->
+                        </div><!-- end column-->
+
+                        <div class="sixteen wide mobile column
+                                      sixteen wide tablet column
+                                      eight wide computer column
+                                      eight wide large screen column">
+                          <div class="serving card">
+                            <div class="image wrapper">
+                              <div class="image" style="background-image: url('img/ewa.jpg')"></div>
+                            </div>
+                            <div class="content">
+                              <div class="ui sub header">Option 3</div>
+                              <div class="ui medium header">Ewa Ganyin and Fish with Bread</div>
+                              <div class="tvn vertical fade clipped description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid idunt.<br>Consectetur  ---   26 mCal
+                              </div>
+                              <div class="meta">
+                                Served by <span class="tvn weight bold">Mama Peace Catering Services</span>
+                              </div>
+                              <div class="footer options">
+                                <div class="ui huge star rating" data-rating="5"></div>
+                                <div class="ui right floated basic button">Add Review</div>
+                              </div>
+                            </div>
+                          </div> <!-- serving card -->
+                        </div><!-- end column-->
+
+                      </div> <!-- end cards -->
+                    </div> <!-- end course content -->
+
+                    <div class="tvn collapsible title active">
+                      <div class="tvn horizontal stroke"></div>
+                      <div class="ui sub header">Desserts</div>
+                      <div class="tvn horizontal stroke"></div>
+                      <div class="toggle">
+                        <svg class="tvn icon"><use xlink:href="#icon-expand"></use></svg>
+                      </div>
+                    </div> <!-- end course title -->
+                    <div class="content active">
+                      <div class="ui grid">
+
+                        <div class="sixteen wide mobile column
+                                      sixteen wide tablet column
+                                      eight wide computer column
+                                      eight wide large screen column">
+                          <div class="serving card">
+                            <div class="image wrapper">
+                              <div class="image" style="background-image: url('img/icecream.jpg')"></div>
+                            </div>
+                            <div class="content">
+                              <div class="ui sub header">Option 1</div>
+                              <div class="ui medium header">Ice cream</div>
+                              <div class="tvn vertical fade clipped description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid idunt.<br>Consectetur  ---   26 mCal
+                              </div>
+                              <div class="meta">
+                                Served by <span class="tvn weight bold">Mama Peace Catering Services</span>
+                              </div>
+                              <div class="footer options">
+                                <div class="ui huge star rating" data-rating="0"></div>
+                                <div class="ui right floated basic button">Add Review</div>
+                              </div>
+                            </div>
+                          </div> <!-- serving card -->
+                        </div><!-- end column-->
+
+                        <div class="sixteen wide mobile column
+                                      sixteen wide tablet column
+                                      eight wide computer column
+                                      eight wide large screen column">
+                          <div class="serving card">
+                            <div class="image wrapper">
+                              <div class="image" style="background-image: url('img/fruitsalad.jpg')"></div>
+                            </div>
+                            <div class="content">
+                              <div class="ui sub header">Option 2</div>
+                              <div class="ui medium header">Fruit Salad</div>
+                              <div class="tvn vertical fade clipped description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid idunt.<br>Consectetur  ---   26 mCal
+                              </div>
+                              <div class="meta">
+                                Served by <span class="tvn weight bold">Mama Peace Catering Services</span>
+                              </div>
+                              <div class="footer options">
+                                <div class="ui huge star rating" data-rating="2"></div>
+                                <div class="ui right floated basic button">Add Review</div>
+                              </div>
+                            </div>
+                          </div> <!-- serving card -->
+                        </div> <!-- end column-->
+
+                      </div> <!-- end cards -->
+                    </div> <!-- end course content -->
+
+                  </div> <!-- end courses -->
+
+                  <div class="tvn horizontal stroke"></div>
+                </div> <!-- end meal section -->
+              </div> <!-- end meals -->
+
+              <!-- footer -->
+              <div class="ui footer container">
+                <div class="signature">
+                  <svg class="tvn icon"><use xlink:href="#icon-taverna"></use></svg>
+                  <div>Powered by the <a href="https://github.com/teamtaverna/taverna/" target="_blank" class="tvn link weight bold" >Taverna Project</a></div>
+                </div>
+              </div> <!-- end footer -->
+
+            </div> <!-- end main -->
+          </div> <!-- end pusher -->
+
+        </div> <!-- end pushable content -->
+
+      </div> <!-- end page-->
+    </div><!-- end app-->
+
+    <!-- icons -->
+    <svg style="position: fixed; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-taverna" viewBox="0 0 16 16" stroke="none" fill-rule="evenodd">
+          <title id="title">taverna</title>
+          <path d="M9.56983321,13.5118967 L9.82601025,14.0730231 C9.62560995,14.1215554 9.42173782,14.1611134 9.21484606,14.1912453 L8.9522583,13.6160193 C9.16148099,13.5916871 9.36752247,13.5567965 9.56983321,13.5118967 Z M7.21549531,13.5720993 L6.95642127,14.1395713 C7.16126215,14.1791343 7.36938035,14.2094005 7.58031663,14.2299113 L7.84734042,13.6449676 C7.63360111,13.6314754 7.42279909,13.6069993 7.21549531,13.5720993 Z M9.82601025,14.0730231 L10.1910278,14.8725521 C10.2602826,15.0245 10.1931447,15.2036354 10.0413285,15.2728125 C10.0001989,15.2912396 9.95785975,15.3 9.91582297,15.3 C9.80090229,15.3 9.6911228,15.2344479 9.64031576,15.1232813 L9.21484606,14.1912453 C8.89594737,14.23769 8.56987449,14.2617396 8.23828344,14.2617396 C8.01632309,14.2617396 7.79683525,14.2509648 7.58031663,14.2299113 L7.17249774,15.1232813 C7.1216907,15.2344479 7.01191121,15.3 6.89699053,15.3 C6.85495375,15.3 6.81261455,15.2912396 6.77148504,15.2728125 C6.61966878,15.2036354 6.5525309,15.0245 6.62178574,14.8725521 L6.95642127,14.1395713 C3.85178637,13.5399416 1.5,10.8047106 1.5,7.53102085 C1.5,3.81962501 4.52271635,0.800000012 8.23828344,0.800000012 C11.9538505,0.800000012 14.9765669,3.81932293 14.9765669,7.53071876 C14.9765669,10.6960111 12.7779452,13.3581328 9.82601025,14.0730231 Z M9.56983321,13.5118967 L8.73891831,11.6918728 L10.189916,8.51331026 C10.3525211,8.55964485 10.5177924,8.58196876 10.6812552,8.58196876 C11.3604969,8.58196876 12.0091939,8.19651043 12.306778,7.5446146 C12.3079746,7.54198924 12.3091305,7.53935577 12.3102461,7.5367149 L12.9299439,6.17914664 C12.9306006,6.17776128 12.931248,6.17636864 12.931886,6.17496876 C12.9332726,6.17192801 12.9346499,6.16888531 12.9360178,6.1658407 L12.9784591,6.0728646 C12.9896637,6.04828125 12.9972982,6.02298625 13.0015816,5.99756041 C13.2842083,5.14618151 12.8786164,4.19542052 12.0370168,3.81207293 C11.1951112,3.42927924 10.2111189,3.74715222 9.75338091,4.51891993 C9.73699126,4.53882013 9.7229005,4.56115559 9.71168755,4.58570835 L9.04589922,6.0452618 C9.04396375,6.04906878 9.04209949,6.05293321 9.04030883,6.05685418 C8.84252429,6.48943751 8.8267983,6.97397918 8.99645752,7.42045835 C9.1258374,7.76085313 9.35070336,8.04818129 9.64381847,8.25335087 C9.64271059,8.25563068 9.6416278,8.25793046 9.64057059,8.26025001 L8.40640675,10.9635444 L7.28721241,8.51207752 C7.9976694,8.03115737 8.28178402,7.09765157 7.91711038,6.29821876 C7.91496778,6.29353824 7.91272043,6.28893826 7.91037241,6.28442032 L6.67899125,3.58641668 C6.60943399,3.43477085 6.42979482,3.36740626 6.27828098,3.43688543 C6.12616228,3.50606251 6.05902441,3.68519793 6.12827924,3.83714585 L7.36609596,6.54925001 C7.36825859,6.55396905 7.37052863,6.55860653 7.37290184,6.56316085 C7.63085727,7.149466 7.36362193,7.84077021 6.77153264,8.11041668 C6.48150913,8.2424271 6.15852153,8.2551146 5.86154229,8.14576043 C5.56577275,8.03701043 5.33109262,7.81981251 5.2010508,7.53464585 L3.96293166,4.8222396 C3.89367683,4.67029168 3.71464251,4.60322918 3.56222139,4.67270835 C3.4101027,4.74188543 3.34326725,4.92102085 3.41252208,5.07296876 L4.64647288,7.77624323 C4.64771074,7.7791962 4.64899925,7.78213976 4.65033879,7.78507293 C4.84782091,8.21826043 5.2037726,8.54783335 5.65226568,8.71277085 C5.85398172,8.78708335 6.06386318,8.8242396 6.27344221,8.8242396 C6.42917545,8.8242396 6.58479584,8.80383708 6.73692563,8.76310092 L8.07389519,11.6918728 L7.21549531,13.5720993 C4.31861129,13.0844036 2.10484569,10.5611852 2.10484569,7.53071876 C2.10484569,4.15252085 4.85628875,1.40416668 8.23828344,1.40416668 C11.6205806,1.40416668 14.3717212,4.15252085 14.3717212,7.53071876 C14.3717212,10.4523476 12.3139708,12.9028768 9.56983321,13.5118967 Z M7.84734042,13.6449676 L8.40640675,12.4202743 L8.9522583,13.6160193 C8.71799773,13.6432634 8.47974899,13.6572708 8.23828344,13.6572708 C8.10697724,13.6572708 7.97662153,13.6531285 7.84734042,13.6449676 Z M12.3778151,5.93218376 L11.7563684,7.29358335 C11.7552863,7.29595745 11.7542376,7.2983382 11.7532219,7.30072505 C11.4820502,7.88524466 10.7802513,8.14047725 10.1852817,7.86965626 C9.89556064,7.73764585 9.67418712,7.50202085 9.56198824,7.20658335 C9.45141511,6.91444724 9.46020174,6.59828804 9.58717134,6.31541004 C9.58848971,6.31272834 9.58977315,6.31001864 9.59102084,6.30728126 L10.2150727,4.93922335 C10.2152236,4.93889583 10.2153741,4.93856791 10.215524,4.9382396 C10.4840755,4.3491771 11.1890232,4.08968751 11.7860059,4.3618646 C12.3829886,4.63404168 12.6500279,5.33487501 12.381174,5.92454168 C12.3800163,5.92708166 12.3788968,5.92962923 12.3778151,5.93218376 Z M6.28402701,7.34403126 C6.16940875,7.34403126 6.05932684,7.2781771 6.00882222,7.16731251 L4.77070309,4.45520835 C4.70144825,4.30356251 4.7682837,4.12412501 4.92040239,4.05494793 C5.07252109,3.98577085 5.25185783,4.05283335 5.32111267,4.20447918 L6.5592318,6.91658335 C6.62848663,7.06822918 6.56165118,7.24766668 6.40953249,7.31684376 C6.36840298,7.33496876 6.32576136,7.34403126 6.28402701,7.34403126 Z" id="Combined-Shape"></path>
+        </symbol>
+        <symbol id="icon-calendar" viewBox="0 0 16 16" stroke="none">
+          <title id="title">calendar</title>
+          <path d="M4.81321402,1.00002259 C4.55839508,1.04814756 4.34091316,1.09239072 4.34091316,1.48692003 L4.34091316,3.39464481 C4.33734953,3.64661285 4.56601076,3.87836044 4.81818561,3.87836044 C5.07036046,3.87836044 5.29902328,3.64661285 5.29545805,3.39464481 L5.29545805,1.48692003 C5.30077169,1.23223155 5.06811251,0.997349866 4.81321402,1.00002259 L4.81321402,1.00002259 Z M11.1271307,1.00495441 C10.8943204,1.03177712 10.7005828,1.25270653 10.7045458,1.4868723 L10.7045458,3.39459709 C10.7009821,3.64656512 10.9296434,3.87831271 11.1818182,3.87831271 C11.4339931,3.87831271 11.6626559,3.64656512 11.6590907,3.39459709 L11.6590907,1.4868723 C11.6590907,1.09239072 11.3845047,1.01120668 11.1271307,1.00495441 L11.1271307,1.00495441 Z M1.42756253,1.96384248 C1.19467903,1.9882311 0.998753923,2.20679006 1.00000597,2.44078083 L1.00000597,14.5230616 C1.00003142,14.7727865 1.22738652,14.9999682 1.47727841,15 L14.5227253,15 C14.7726172,14.9999682 14.9999723,14.7727865 14.9999978,14.5230616 L14.9999978,2.44078083 C14.9999723,2.19105598 14.7726172,1.9638743 14.5227253,1.96384248 L11.8181815,1.96384248 L11.8181815,2.91770328 L14.0454529,2.91770328 L14.0454529,4.50748506 L1.95455078,4.50748506 L1.95455078,2.91770328 L4.18182235,2.91770328 L4.18182235,1.96384248 L1.47727841,1.96384248 C1.46072183,1.96225157 1.44411911,1.96225157 1.42756253,1.96384248 L1.42756253,1.96384248 Z M5.45454887,1.96384248 L5.45454887,2.91770328 L10.545455,2.91770328 L10.545455,1.96384248 L5.45454887,1.96384248 Z M1.95455078,5.46134586 L14.0454529,5.46134586 L14.0454529,14.0461392 L1.95455078,14.0461392 L1.95455078,5.46134586 Z"></path>
+        </symbol>
+        <symbol id="icon-expand" viewBox="0 0 16 16"  stroke="none">
+          <title id="title">expand</title>
+          <path d="M8,2.45833333 C11.0625,2.45833333 13.5416667,4.9375 13.5416667,8 C13.5416667,11.0625 11.0625,13.5416667 8,13.5416667 C4.9375,13.5416667 2.45833333,11.0625 2.45833333,8 C2.45833333,4.9375 4.9375,2.45833333 8,2.45833333 L8,2.45833333 Z M8,1 C4.12083333,1 1,4.12083333 1,8 C1,11.8791667 4.12083333,15 8,15 C11.8791667,15 15,11.8791667 15,8 C15,4.12083333 11.8791667,1 8,1 L8,1 L8,1 Z M8.525,9.69166667 L10.275,7.94166667 C10.5666667,7.65 10.5666667,7.18333333 10.275,6.92083333 C9.98333333,6.62916667 9.51666667,6.62916667 9.25416667,6.92083333 L8,8.14583333 L6.775,6.92083333 C6.48333333,6.62916667 6.01666667,6.62916667 5.75416667,6.92083333 C5.4625,7.2125 5.4625,7.67916667 5.75416667,7.94166667 L7.50416667,9.69166667 C7.65,9.8375 7.825,9.89583333 8.02916667,9.89583333 C8.23333333,9.89583333 8.37916667,9.8375 8.525,9.69166667 L8.525,9.69166667 Z"></path>
+        </symbol>
+        <symbol id="icon-timetable" viewBox="0 0 16 16" stroke-width="0.9" fill="none">
+          <title id="title">timetable</title>
+          <path d="M7.00686499,6.60640732 C7.00686499,6.82745995 6.82745995,7.00686499 6.60640732,7.00686499 L1.40045767,7.00686499 C1.17940503,7.00686499 1,6.82745995 1,6.60640732 L1,1.40045767 C1,1.17940503 1.17940503,1 1.40045767,1 L6.60640732,1 C6.82745995,1 7.00686499,1.17940503 7.00686499,1.40045767 L7.00686499,6.60640732 Z M15,6.60640732 C15,6.82745995 14.820595,7.00686499 14.5995423,7.00686499 L9.39359268,7.00686499 C9.17254005,7.00686499 8.99313501,6.82745995 8.99313501,6.60640732 L8.99313501,1.40045767 C8.99313501,1.17940503 9.17254005,1 9.39359268,1 L14.5995423,1 C14.820595,1 15,1.17940503 15,1.40045767 L15,6.60640732 Z M7.00686499,14.5995423 C7.00686499,14.820595 6.82745995,15 6.60640732,15 L1.40045767,15 C1.17940503,15 1,14.820595 1,14.5995423 L1,9.39359268 C1,9.17254005 1.17940503,8.99313501 1.40045767,8.99313501 L6.60640732,8.99313501 C6.82745995,8.99313501 7.00686499,9.17254005 7.00686499,9.39359268 L7.00686499,14.5995423 Z M15,14.5995423 C15,14.820595 14.820595,15 14.5995423,15 L9.39359268,15 C9.17254005,15 8.99313501,14.820595 8.99313501,14.5995423 L8.99313501,9.39359268 C8.99313501,9.17254005 9.17254005,8.99313501 9.39359268,8.99313501 L14.5995423,8.99313501 C14.820595,8.99313501 15,9.17254005 15,9.39359268 L15,14.5995423 Z" id="Combined-Shape"></path>
+        </symbol>
+        <symbol id="icon-menu" viewBox="0 0 16 16" stroke-width="0.9" fill="none">
+          <title id="title">menu</title>
+          <polygon id="Shape" points="2.5 15 13.7 15 13.7 3.8 2.5 3.8"></polygon>
+          <polygon id="Shape" points="11.6 3.53057255 4.6 3.53057255 11.6 1"></polygon>
+          <path d="M11.1079189,9.11948862 C11.1079189,7.57595278 9.85642461,6.36808784 8.31288877,6.36808784 C6.76935293,6.36808784 5.51785863,7.57595278 5.51785863,9.11948862 L11.1079189,9.11948862 L11.1079189,9.11948862 Z" id="Shape"></path>
+          <path d="M5.16839143,10.8 L11.4573075,10.8" id="Shape"></path>
+          <path d="M5.16839143,12.2 L11.4573075,12.2" id="Shape"></path>
+          <path d="M8.1,5.58197333 L8.1,6.31816957" id="Shape"></path>
+        </symbol>
+        <symbol id="icon-vendor" viewBox="0 0 16 16" stroke="none">
+          <title id="title">vendor</title>
+          <path d="M5.18640781,3.34149612 L5.18640781,4.87685047 C5.18640781,6.56370089 6.45048549,7.9825198 7.99126221,7.9825198 C9.53203893,7.9825198 10.793204,6.56370089 10.793204,4.87685047 L10.793204,3.34149612 C11.4805826,3.26574809 12.016505,2.68307092 12.016505,1.97511815 C12.016505,1.21763783 11.3990292,0.600000024 10.6417477,0.600000024 L5.34077674,0.600000024 C4.58349518,0.600000024 3.96601944,1.21763783 3.96601944,1.97511815 C3.96601944,2.68307092 4.50194178,3.26574809 5.18640781,3.34149612 Z M7.99126221,7.16094499 C7.01262142,7.16094499 6.20291268,6.34811033 6.04854374,5.29055127 L9.93689331,5.29055127 C9.78252437,6.34811033 8.969903,7.16094499 7.99126221,7.16094499 Z M9.97184476,4.46606307 L6.01067966,4.46606307 L6.01067966,3.35023628 L9.97184476,3.35023628 L9.97184476,4.46606307 Z M5.34077674,1.42157484 L10.6417477,1.42157484 C10.9475729,1.42157484 11.1951457,1.66921264 11.1951457,1.97511815 C11.1951457,2.28102367 10.9475729,2.52866147 10.6417477,2.52866147 L5.34077674,2.52866147 C5.0349515,2.52866147 4.78737868,2.28102367 4.78737868,1.97511815 C4.78737868,1.66921264 5.0349515,1.42157484 5.34077674,1.42157484 Z M12.0048545,9.68976392 C9.4184467,8.8274017 6.56699035,8.8274017 3.97766993,9.68976392 C2.79514564,10.083071 2,11.1843309 2,12.4283466 L2,14.9892128 C2,15.2164569 2.18349515,15.4000002 2.41067962,15.4000002 L13.5689322,15.4000002 C13.7961167,15.4000002 13.9796118,15.2164569 13.9796118,14.9892128 L13.9796118,12.4283466 C13.9825244,11.1843309 13.1873788,10.083071 12.0048545,9.68976392 Z M9.54368942,9.96653558 C9.49708748,10.785197 8.82135931,11.4348821 7.99126221,11.4348821 C7.16407774,11.4348821 6.48543695,10.7822836 6.43883501,9.96653558 C7.46990298,9.83251983 8.51262144,9.83251983 9.54368942,9.96653558 Z M4.11165051,14.5784254 L2.82135923,14.5784254 L2.82135923,12.4283466 C2.82135923,11.5834647 3.3339806,10.8347246 4.10873789,10.5171655 L4.10873789,14.5784254 L4.11165051,14.5784254 Z M11.0495147,14.5784254 L4.93300975,14.5784254 L4.93300975,10.2637009 C5.16310684,10.2025198 5.39320393,10.1471655 5.62621364,10.1005513 C5.73689325,11.3096065 6.75631074,12.2593703 7.99126221,12.2593703 C9.22912631,12.2593703 10.2456312,11.3096065 10.3563108,10.1005513 C10.5893205,10.1471655 10.8194176,10.2025198 11.0495147,10.2637009 L11.0495147,14.5784254 Z M13.1611652,14.5784254 L11.8737865,14.5784254 L11.8737865,10.5171655 C12.6485438,10.8318112 13.1611652,11.5834647 13.1611652,12.4283466 L13.1611652,14.5784254 Z"></path>
+        </symbol>
+      </defs>
+    </svg><!-- end icons -->
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+
+</html>
