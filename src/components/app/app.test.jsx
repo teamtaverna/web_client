@@ -1,11 +1,11 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import Sample from './sample';
+import App from './app';
 
-describe('Sample', () => {
+describe('App', () => {
   it('should have the content', () => {
-    const sample = shallow(<Sample />);
-    expect(sample.text()).to.equal('This is a sample Component Test Button ');
+    const app = shallow(<App />);
+    expect(app.text()).to.equal('This is a sample Component Test Button ');
   });
 });
