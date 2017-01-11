@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-require('./sample.scss');
+import "./app.scss";
 
 export default class Sample extends Component {
   constructor() {
