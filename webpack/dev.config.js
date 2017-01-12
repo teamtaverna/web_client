@@ -9,6 +9,7 @@ const webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic.
 module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     webpackIsomorphicToolsPlugin.development()
   ],
   debug: true,

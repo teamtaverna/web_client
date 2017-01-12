@@ -1,19 +1,17 @@
-/* eslint-disable */;
+/* eslint-disable */ ;
 
 const webpack = require('webpack');
 const path = require('path');
 const IsomorphicPlugin = require('webpack-isomorphic-tools/plugin');
 const webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic.config')); // eslint-disable-line
 const development = (process.env.NODE_ENV || 'development') === 'development';
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-const cssNames = development ? '[name].css' : '[name].[hash].css';
-const extractCSS = new ExtractTextPlugin(cssNames);
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: {
-    app: './src/client',
+    app: ['webpack-dev-server/client?http://localhost:4001/', 'webpack/hot/dev-server',
+      './src/client'
+    ],
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
@@ -26,26 +24,26 @@ module.exports = {
   },
   module: {
     loaders: [{
-      test: /\.jsx?$/,
-      loader: 'babel-loader',
-      exclude: /(node_modules|bower_components|libs)/,
-      query: {
-        presets: ['es2015', 'react', 'stage-0'],
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /(node_modules|bower_components|libs)/,
+        query: {
+          presets: ['es2015', 'react', 'stage-0'],
+        },
       },
-    },
-    { test: /\.css$/, loader: 'style!css' },
-    // LESS
-    { test: /\.scss$/i, loader: extractCSS.extract(['css', 'postcss-loader', 'sass']) },
-    { test: webpackIsomorphicToolsPlugin.regular_expression('images'), loader: 'url-loader?limit=10240' },
-    { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
-    { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
-    { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
-    { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
-    { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'svg-loader' },
-    {
-      test: webpackIsomorphicToolsPlugin.regular_expression('images'),
-      loader: 'url-loader?name=images/[name].[ext]&limit=10240',
-    },
+      { test: /\.css$/, loader: 'style!css' },
+      // LESS
+      { test: /\.scss$/i, loaders: ['style', 'css', 'postcss-loader', 'sass'] },
+      { test: webpackIsomorphicToolsPlugin.regular_expression('images'), loader: 'url-loader?limit=10240' },
+      { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
+      { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
+      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'svg-loader' },
+      // {
+      //   // test: webpackIsomorphicToolsPlugin.regular_expression('images'),
+      //   //   loader: 'url-loader?name=images/[name].[ext]&limit=10240',
+      // },
     ],
   },
   postcss: [autoprefixer({
@@ -61,7 +59,6 @@ module.exports = {
     ],
   })],
   plugins: [
-    extractCSS,
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
