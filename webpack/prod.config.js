@@ -7,7 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic.config'));
 
-const cssNames = development ? '[name].css' : '[name].[hash].css';
+const cssNames = '[name].[hash].css';
 const extractCSS = new ExtractTextPlugin(cssNames);
 const ENV = process.env.NODE_ENV;
 

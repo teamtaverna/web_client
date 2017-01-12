@@ -20,7 +20,7 @@ export default class Sample extends Component {
         <img src={logo} role="presentation" />
         <button onClick={this.checkTest}> Test Button </button>
         <button onClick={this.checkTest}> Test Button </button>
-
+        <button onClick={this.checkTest}> Test Button </button>
       </div>
     );
   }
