@@ -8,7 +8,16 @@ const webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic.
 
 module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
+  entry: {
+    app: ['webpack-dev-server/client?http://localhost:4001/', 'webpack/hot/dev-server']
+  },
+  module: {
+    loaders: [
+      { test: /\.scss$/i, loaders: ['style', 'css', 'postcss-loader', 'sass'] },
+    ]
+  },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     webpackIsomorphicToolsPlugin.development()
   ],
   debug: true,
