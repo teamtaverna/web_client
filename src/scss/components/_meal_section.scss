@@ -1,0 +1,52 @@
+.meal.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > .vertical.stroke {
+    height: 80px;
+  }
+  & > .horizontal.stroke {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .header{
+    margin-top: 10px;
+  }
+  .schedule {
+    font-weight: $tvn-font-weight-regular;
+  }
+  .title {
+    letter-spacing: 0.9em;
+    margin-right: -0.9em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  .courses {
+    width: 100%;
+  }
+  .tvn.collapsible.title {
+    margin: 15px 10%;
+
+    .toggle {
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.active .toggle {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+
+  // media queries:
+  @media only screen and (max-width: 380px) {
+    & > .vertical.stroke {
+      height: 60px;
+    }
+    .tvn.collapsible.title .toggle {
+        margin-left: 8px;
+    }
+  }
+}

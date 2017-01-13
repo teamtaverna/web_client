@@ -17,8 +17,11 @@ export default ({ assets, component }) => { // eslint-disable-line
       lang="en-us" //eslint-disable-line
     >
       <head>
+        <title>Taverna - Menu</title>
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css" />
         {/* styles (will be present only in production with webpack extract text plugin) */}
         {Object.keys(assets.styles).map((style, key) =>
           <link
@@ -33,8 +36,11 @@ export default ({ assets, component }) => { // eslint-disable-line
         {Object.keys(assets.javascript).map((script, i) =>
             <script src={__DEVELOPMENT__ ? assets.javascript[script] : `${assets.javascript[script]}`} key={i} /> // eslint-disable-line
         )}
+
+        <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js" />
+        <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js" />
       </body>
     </html>
-    );
+  );
 };
 

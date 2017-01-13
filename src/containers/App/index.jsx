@@ -1,9 +1,10 @@
 import React from 'react';
-import { Sample, Header } from '../../components';
+import { Header } from '../../components';
 
 export default () => (
-  <div className="test-container">
-    <Header />
-    <Sample />
+  <div id="app">
+    <div id="home page" className="tvn page">
+      <Header />
+    </div>
   </div>
 );

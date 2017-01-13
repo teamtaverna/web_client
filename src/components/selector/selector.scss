@@ -1,0 +1,168 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.top.menu .selector {
+  height: 100%;
+  width: calc(100% / 3);
+  max-width: 360px;
+
+  @include tvn-theme-normal;
+
+  &:hover {
+    @include tvn-theme-accented;
+    .menu {
+      @extend .menu;
+    }
+  }
+
+  .tab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      overflow: hidden;
+    }
+    .info.section {
+      align-items: flex-start;
+      margin-right: 18%;
+    }
+    .icon.section {
+      flex: none;
+      align-items: center;
+      margin: 0 10%;
+    }
+    .icon.section .icon.header > .tvn.icon {
+      width: 35px;
+      height: 35px;
+    }
+    .header {
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .sub.header {
+      margin-top: 3px;
+    }
+    // this is only for calendar icon
+    .calendar.icon.header > .number {
+      font-size: 1.1em;
+      margin-bottom: 6px;
+    }
+
+    // media queries:
+    @media only screen and (max-width: 767px) {
+      & {
+        justify-content: center;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .icon.section .icon.header > .tvn.icon {
+        width: 30px;
+        height: 30px;
+      }
+      // this is only for calendar icon
+      .calendar.icon.header > .number {
+        font-size: 1em;
+        margin-bottom: 6px;
+      }
+    }
+
+  }
+
+  .dropdown.toggle {
+    margin-right: 10%;
+    z-index: 1;
+
+    .tvn.icon {
+      width: $toggle-dropdown-icon-size;
+      height: $toggle-dropdown-icon-size;
+      opacity: $toggle-dropdown-icon-opacity;
+    }
+  }
+
+  .dropdown.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 280px;
+    min-height: $tvn-fixed-top-menu-height;
+    max-height: 70vh;
+    left: auto;
+    right: 0;
+    border: $tvn-stroke;
+    border-bottom-right-radius: $tvn-content-border-radius;
+    border-bottom-left-radius: $tvn-content-border-radius;
+    box-shadow: $tvn-component-box-shadow;
+    overflow: hidden;
+
+    // media queries:
+    @media only screen and (max-width: 767px) {
+      & {
+        position: fixed;
+        top: $tvn-fixed-top-menu-height !important;
+        min-width: unset;
+        min-height: unset;
+        max-height: calc(100vh - #{$tvn-fixed-top-menu-height});
+      }
+    }
+  }
+
+  .dropdown.menu .content {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .dropdown.menu .footer {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $tvn-dropdown-footer-height;
+    border-top: $tvn-stroke;
+    overflow: hidden;
+    @include tvn-theme-normal;
+  }
+
+  .dropdown.menu .list .item {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: $tvn-fixed-top-menu-height;
+    overflow: hidden;
+    padding: 0 10% !important;
+    border: 0;
+    border-top: $tvn-stroke;
+    cursor: pointer;
+
+    .header, .description {
+      margin: 0;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      line-height: 1.3em;
+    }
+    .description {
+      margin-top: 3px;
+      color: $tvn-black;
+      font-size: $tvn-font-size-small !important;
+    }
+
+    &:hover {
+      background-color: $tvn-ash;
+    }
+    &:active {
+      background-color: $tvn-grey;
+    }
+  }
+
+}
