@@ -37,7 +37,6 @@ export default ({ assets, component }) => { // eslint-disable-line
             <script src={__DEVELOPMENT__ ? assets.javascript[script] : `${assets.javascript[script]}`} key={i} /> // eslint-disable-line
         )}
 
-        <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js" />
         <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js" />
       </body>
     </html>

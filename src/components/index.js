@@ -1,4 +1,14 @@
-export Sample from './sample/sample';
-export Header from './header/header';
-export Logo from './logo/logo';
-
+export { default as Sample } from './sample/sample';
+export { default as Header } from './header/header';
+export { default as Logo } from './logo/logo';
+export { default as Selector } from './selector/selector';
+export { default as Calendar } from './calendar/calendar';
+export { default as CalendarDropdown } from './calendar/calendarDropdown';
+export { default as Timetable } from './timetable/timetable';
+export { default as TimetableDropdown } from './timetable/timetableDropdown';
+export { default as Vendor } from './vendor/vendor';
+export { default as VendorDropdwon } from './vendor/vendorDropdown';
+export { default as ExpandIcon } from './icons/expandIcon/expandIcon';
+export { default as VendorIcon } from './icons/vendorIcon/vendorIcon';
+export { default as TimetableIcon } from './icons/timetableIcon/timetableIcon';
+export { default as CalendarIcon } from './icons/calendarIcon/calendarIcon';
