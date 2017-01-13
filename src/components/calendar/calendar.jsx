@@ -1,14 +1,19 @@
 import React from 'react';
-import './calendar.svg';
+import calendarIcon from './calendar.svg';
+import expandIcon from './expand.svg';
 
-const calendarTag = '<use xlink:href="#icon-calendar" />';
-const expandIcon = '<use xlink:href="#icon-expand" />';
+import './calendar.scss';
+
 
 const Calendar = () => (
-  <div className="tab tvn themed positioning">
+  <div className="tab tvn themed positioning calendar-icon">
     <div className="icon section">
       <div className="tvn positioning calendar icon header">
-        <svg className="tvn icon" dangerouslySetInnerHTML={{ __html: calendarTag }} />
+        <svg
+          className="tvn icon"
+          {...calendarIcon.attributes}
+          dangerouslySetInnerHTML={{ __html: calendarIcon.content }}
+        />
         <span
           className={`ui medium header
           number tvn center bottom 
@@ -32,7 +37,11 @@ const Calendar = () => (
        tablet or lower hidden
        tvn right middle positioned`}
     >
-      <svg className="tvn icon" dangerouslySetInnerHTML={{ __html: expandIcon }} />
+      <svg
+        className="tvn icon"
+        {...expandIcon.attributes}
+        dangerouslySetInnerHTML={{ __html: expandIcon.content }}
+      />
     </div>
   </div>
 );

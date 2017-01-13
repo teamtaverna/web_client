@@ -1,14 +1,17 @@
 import React from 'react';
-import TimetableDropdown from './timetableDropdown';
-
-const timetableIcon = '<use xlink:href="#icon-timetable" />';
-const expandIcon = '<use xlink:href="#icon-expand" />';
+import timetableIcon from './timetable.svg';
+import expandIcon from './expand.svg';
+import './timetable.scss';
 
 const Timetable = () => (
-  <div className="tab tvn themed positioning">
+  <div className="tab tvn themed positioning timetable-icon">
     <div className="icon section">
       <div className="icon header">
-        <svg className="tvn icon" dangerouslySetInnerHTML={{ __html: timetableIcon }} />
+        <svg
+          className="tvn icon"
+          {...timetableIcon.attributes}
+          dangerouslySetInnerHTML={{ __html: timetableIcon.content }}
+        />
       </div>
       <div className="ui mobile only sub header">LOS-A</div>
     </div>
@@ -23,7 +26,11 @@ const Timetable = () => (
       tablet or lower hidden
       tvn right middle positioned`}
     >
-      <svg className="tvn icon" dangerouslySetInnerHTML={{ __html: expandIcon }} />
+      <svg
+        className="tvn icon"
+        {...timetableIcon.atrributes}
+        dangerouslySetInnerHTML={{ __html: expandIcon.content }}
+      />
     </div>
   </div>
 );

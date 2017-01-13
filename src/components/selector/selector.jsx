@@ -15,7 +15,7 @@ const Selector = () => (
       <div className="fitted item selector ui simple dropdown">
         <Calendar />
       </div>
-      <div className="fitted item selector ui simple dropdown">
+      <div className="fitted item selector ui simple dropdown timetable">
         <Timetable />
         <TimetableDropdown />
       </div>
