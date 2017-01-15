@@ -1,6 +1,6 @@
 import React from 'react';
 
-const logo = require('./logo.png');
+const logo = require('./logo.svg');
 
 const Logo = () => (
   <div
