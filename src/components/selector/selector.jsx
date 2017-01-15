@@ -1,6 +1,6 @@
 import React from 'react';
 import Calendar from '../calendar/calendar';
-import CalendarDropdown from '../calendar/calendarDropdown';
+import { CalendarDropdown } from '../calendar/calendarDropdown';
 import Timetable from '../timetable/timetable';
 import TimetableDropdown from '../timetable/timetableDropdown';
 import Vendor from '../vendor/vendor';
