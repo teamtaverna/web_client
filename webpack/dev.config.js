@@ -1,19 +1,26 @@
 /* eslint-disable */
 const webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./common.config.js');
 const IsomorphicPlugin = require('webpack-isomorphic-tools/plugin');
 const path = require('path')
 const webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic.config'));
 
 module.exports = webpackMerge(commonConfig, {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
+  entry: {
+    app: ['webpack-dev-server/client?http://localhost:4001/', 'webpack/hot/dev-server']
+  },
+  module: {
+    loaders: [
+      { test: /\.scss$/i, loaders: ['style', 'css', 'postcss-loader', 'sass'] },
+    ]
+  },
   plugins: [
-    new ExtractTextPlugin('[name].css'),
+    new webpack.HotModuleReplacementPlugin(),
     webpackIsomorphicToolsPlugin.development()
   ],
-
+  debug: true,
   devServer: {
     historyApiFallback: true,
     stats: 'minimal',

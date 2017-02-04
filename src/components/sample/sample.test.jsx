@@ -6,6 +6,6 @@ import Sample from './sample';
 describe('Sample', () => {
   it('should have the content', () => {
     const sample = shallow(<Sample />);
-    expect(sample.text()).to.equal('This is a sample Component Test Button ');
+    expect(sample.text()).to.contain('This is a sample Component Test Button ');
   });
 });
