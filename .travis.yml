@@ -10,6 +10,8 @@ script:
   - npm test
   - npm build
 
+after_success: npm run coverage
+
 notifications:
   slack: teamtaverna:iP55LweubU8UOBgu9e0cTeED
 
