@@ -21,7 +21,7 @@ const Calendar = () => (
     </div>
 
     <div className="mobile hidden info section tvn fade clipped">
-      <h3 className="ui medium header">Friday</h3>
+      <h3 className="ui medium header day">Friday</h3>
       <div className="ui sub header tvn regular weight">
         August 26, 2016
       </div>
