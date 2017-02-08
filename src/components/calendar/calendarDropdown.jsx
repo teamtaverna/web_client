@@ -2,7 +2,7 @@ import React from 'react';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
-export const CalendarDropdown = () => (
+const CalendarDropdown = () => (
   <div className="ui dropdown menu">
     <div className="content">
       <DayPicker
