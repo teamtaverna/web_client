@@ -18,6 +18,6 @@ describe('<VendorDropdown />', () => {
   });
 
   it('should show the type of service the vendor\'s render', () => {
-    expect(wrapper.find('.description').text()).to.have.length(2);
+    expect(wrapper.find('.description')).to.have.length(2);
   });
 });
