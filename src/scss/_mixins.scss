@@ -1,0 +1,99 @@
+// COLOR THEMES
+// ===================================================================================
+
+
+@mixin color-theme-transition {
+  transition: $tvn-fx-duration;
+}
+
+@mixin tvn-theme-normal {
+  @include color-theme-transition;
+  background-color: $tvn-white;
+
+  &, .header {
+    color: $tvn-black;
+  }
+  .tvn.icon {
+    fill: $tvn-black;
+    stroke: $tvn-black;
+  }
+  .tvn.stroke {
+    background-color: $tvn-grey;
+  }
+  .tvn.fade.clipped:after{
+    background-image: $tvn-fade-clip;
+  }
+}
+
+@mixin tvn-theme-accented {
+  @include color-theme-transition;
+
+  &.tvn.themed, .tvn.themed {
+    background-color: $tvn-accent-color;
+
+    &, .header {
+      color: $tvn-white;
+    }
+    .tvn.icon {
+      fill: $tvn-white;
+      stroke: $tvn-white;
+    }
+    .tvn.stroke {
+      background-color: $tvn-ash;
+    }
+    &.tvn.fade.clipped:after, .tvn.fade.clipped:after{
+      background-image: $tvn-accented-fade-clip;
+    }
+  }
+}
+
+
+// FONTS
+// ===================================================================================
+@mixin sub-header-text($weight: $tvn-font-weight-regular) {
+  font-size: $tvn-font-size-small;
+  font-weight: $weight;
+  letter-spacing: $tvn-letter-spacing-sub-header;
+  text-transform: uppercase;
+}
+
+
+// LAYOUT
+// ===================================================================================
+
+@mixin stretch-to-fill {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin limited-pad($padding, $limit) {
+  content: '';
+  flex: none;
+  width: $padding;
+  max-width: $limit;
+  height: 100%;
+}
+
+@mixin limited-padding($padding, $limit, $before:true, $after:true) {
+  @if ($before == true) {
+    &:before {
+      @include limited-pad($padding, $limit);
+    }
+  }
+  @if ($after == true) {
+    &:after {
+      @include limited-pad($padding, $limit);
+    }
+  }
+}
+
+// COMPONENTS
+// ===================================================================================
+@mixin basic-button {
+  @include sub-header-text($weight: $tvn-font-weight-heavy);
+  color: $tvn-black !important;
+  &:hover {
+    //background-color: $tvn-ash;
+    //border: 1px solid $tvn-grey;
+  }
+}
