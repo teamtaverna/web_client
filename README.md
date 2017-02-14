@@ -24,15 +24,19 @@ $ git clone https://github.com/teamtaverna/web_client.git
 Be sure to have the following installed and setup first.
 * NodeJS
 
-Next,
-- install the dependencies
+Next, install dependencies
 
 ```
-npm install
+$ npm install
 ```
+
+
+### Development
 
 To start the server
 
 ```
-npm run dev
+$ npm run dev
 ```
+
+Note that there is already a static (markup and styles only with hard-coded data) build of the web-client from the designed mockups that provides the needed markup and styles for building out the React components. Please find more information in the [readme here](https://github.com/teamtaverna/web_client/tree/master/static_build).
