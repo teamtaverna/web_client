@@ -1,0 +1,45 @@
+@import "fixed_menu_bar";
+@import "generic_menu_bar_selector";
+@import "day_picker";
+@import "meal_section";
+@import "serving_card";
+@import "sidebar";
+@import "review_form";
+@import "reviews_list";
+
+
+html, body, #app, .tvn.page, .pushable.content, .sidebar, .pusher {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.main  {
+  height: 100%;
+  overflow-y: auto;
+  padding-top: $tvn-fixed-top-menu-height;
+
+  & > .footer {
+    @include tvn-theme-normal;
+    padding: 60px 0;
+    background-color: unset;
+
+    &, .signature {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .signature {
+      font-size: $tvn-font-size-small;
+    }
+
+    .signature .icon{
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
