@@ -1,23 +1,17 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const logo = require('./logo.svg');
 
-const Logo = () => (
-  <div
-    className={`eight wide mobile
-        four wide tablet
-        six wide computer
-        left floated column
-        tvn no padding`}
-  >
-
-    <div className="tvn fade clipped brand">
-      <img className="logo" src={logo} alt="Tarvena" />
-      <h1 className="name ui large header">Taverna Inc.</h1>
-    </div>
-
+const Logo = props => (
+  <div className="tvn fade clipped brand">
+    <img className="logo" src={logo} alt="Tarvena" />
+    <h1 className="name ui large header">{props.organizationName}</h1>
   </div>
-  );
+);
+
+Logo.propTypes = {
+  organizationName: PropTypes.string,
+};
 
 export default Logo;
 
