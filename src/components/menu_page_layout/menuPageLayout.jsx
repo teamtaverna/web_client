@@ -37,7 +37,6 @@ const MenuPageLayout = () => (
 
           <div className="ui footer container">
             <div className="signature">
-              {/* <svg class="tvn icon"><use xlink:href="#icon-taverna"></use></svg>*/}
               <div className="powered">Powered by the <a href="https://github.com/teamtaverna/taverna/" target="_blank" rel="noopener noreferrer" className="tvn link weight bold" >Taverna Project</a></div>
             </div>
           </div>
