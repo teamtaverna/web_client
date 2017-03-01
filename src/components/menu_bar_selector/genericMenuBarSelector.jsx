@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { TimetableIcon } from '../icons';
+import { TimetableIcon, ExpandIcon } from '../icons';
 
 
 const GenericMenuBarSelector = props => (
@@ -20,7 +20,9 @@ const GenericMenuBarSelector = props => (
         <h3 className="ui medium header">{props.mediumHeader}</h3>
         <div className="ui sub header tvn regular weight">{props.regularHeader}</div>
       </div>
-      <div className="dropdown toggle tablet or lower hidden tvn right middle positioned" />
+      <div className="dropdown toggle tablet or lower hidden tvn right middle positioned">
+        <ExpandIcon />
+      </div>
     </div>
   </div>
 );
