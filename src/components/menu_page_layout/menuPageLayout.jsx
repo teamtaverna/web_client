@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../logo/logo';
+import GenericMenuBarSelector from '../menu_bar_selector/genericMenuBarSelector';
 
 const MenuPageLayout = () => (
   <div id="home page" className="tvn page">
@@ -23,7 +24,13 @@ const MenuPageLayout = () => (
                         right floated column
                         tvn no padding`}
       >
-        <div className="selectors" />
+        <div className="selectors">
+          <GenericMenuBarSelector
+            mobileSubHeader="LOS-A"
+            mediumHeader="Lagos General"
+            regularHeader="Timetable"
+          />
+        </div>
       </div>
 
     </div>
