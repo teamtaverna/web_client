@@ -26,9 +26,7 @@ const GenericMenuBarSelector = props => (
     </div>
 
     <div className="ui dropdown menu">
-      <div>
-        {props.children}
-      </div>
+      {props.children}
     </div>
   </div>
 );
