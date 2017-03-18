@@ -24,6 +24,12 @@ const GenericMenuBarSelector = props => (
         <ExpandIcon />
       </div>
     </div>
+
+    <div className="ui dropdown menu">
+      <div>
+        {props.children}
+      </div>
+    </div>
   </div>
 );
 
@@ -31,6 +37,7 @@ GenericMenuBarSelector.propTypes = {
   mobileSubHeader: PropTypes.string,
   mediumHeader: PropTypes.string,
   regularHeader: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default GenericMenuBarSelector;
