@@ -7,6 +7,9 @@ const webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic.
 const development = (process.env.NODE_ENV || 'development') === 'development';
 const autoprefixer = require('autoprefixer');
 const port = development ? +process.env.PORT + 1 : (+process.env.PORT || 5000);
+const publicPath = development ? `http://localhost:${+process.env.PORT + 1}/assets/`: '/assets/';
+
+
 module.exports = {
   entry: {
     app: [
@@ -17,7 +20,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   output: {
-    publicPath: `http://localhost:${port}/assets/`,
+    publicPath: publicPath,
     path: path.resolve(__dirname, '../dist/assets'),
     filename: development ? '[name].js' : '[name].[hash].js',
     chunkFilename: development ? '[id].js' : '[id].[hash].js',
