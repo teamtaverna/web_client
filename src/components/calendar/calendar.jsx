@@ -1,41 +1,52 @@
-import React from 'react';
-import { ExpandIcon, CalendarIcon } from '../icons';
+import React, { PropTypes } from 'react';
+import 'react-day-picker/lib/style.css';
+import DayPicker, { NavbarPropTypes } from 'react-day-picker';
+import GenericMenuBarSelector from '../menu_bar_selector/genericMenuBarSelector';
+import { ExpandIcon, TimetableIcon } from '../icons';
 
-import './calendar.scss';
-
-
-const Calendar = () => (
-  <div className="tab tvn themed positioning">
-    <div className="icon section">
-      <div className="tvn positioning calendar icon header">
-        <CalendarIcon />
-        <span
-          className={`ui medium header
-          number tvn center bottom 
-          positioned`}
-        >
-          26
-        </span>
-      </div>
-      <div className="ui mobile only sub header">Aug</div>
-    </div>
-
-    <div className="mobile hidden info section tvn fade clipped">
-      <h3 className="ui medium header day">Friday</h3>
-      <div className="ui sub header tvn regular weight">
-        August 26, 2016
-      </div>
-    </div>
-
-    <div
-      className={`dropdown toggle
-       tablet or lower hidden
-       tvn right middle positioned`}
+const DayPickerNavbar = ({ onPreviousClick, onNextClick, className }) => (
+  <div className={className} style={{ fontSize: '.75em' }}>
+    <span // eslint-disable-line
+      className="DayPicker-NavButton DayPicker-NavButtons--prev"
+      style={{ float: 'left', cursor: 'pointer' }} onClick={() => onPreviousClick()}
     >
       <ExpandIcon />
-    </div>
+    </span>
+    <span // eslint-disable-line
+      className="DayPicker-NavButton DayPicker-NavButtons--next"
+      style={{ float: 'right', cursor: 'pointer' }} onClick={() => onNextClick()}
+    >
+      <ExpandIcon />
+    </span>
   </div>
 );
+
+DayPickerNavbar.propTypes = NavbarPropTypes;
+
+const Calendar = ({ mobileSubHeader, regularHeader, mediumHeader }) => (
+  <GenericMenuBarSelector
+    mobileSubHeader={mobileSubHeader}
+    mediumHeader={mediumHeader}
+    regularHeader={regularHeader}
+    selectorIcon={<TimetableIcon />}
+  >
+    <div className="content">
+      <DayPicker
+        initialMonth={new Date(2017, 0)}
+        navbarElement={<DayPickerNavbar />}
+      />
+    </div>
+    <div className="footer">
+      <button className="ui basic button">Show Today</button>
+    </div>
+  </GenericMenuBarSelector>
+);
+
+Calendar.propTypes = {
+  mobileSubHeader: PropTypes.string,
+  regularHeader: PropTypes.string,
+  mediumHeader: PropTypes.string,
+};
 
 export default Calendar;
 
