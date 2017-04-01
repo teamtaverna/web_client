@@ -1,25 +1,19 @@
 language: node_js
-
 node_js:
-  - '6.6'
-
+- '6.6'
 install:
-  - npm install
-
+- npm install
 script:
-  - npm test
-  - npm build
-
+- npm test
+- npm run build
 after_success: npm run coverage
-
 notifications:
   slack: teamtaverna:iP55LweubU8UOBgu9e0cTeED
-
 deploy:
   provider: heroku
   skip_cleanup: true
   api_key:
-    secure: o+Lhw3PDuV3DpuwQ64Ve9qfgMSME9dpcLlHXU3eO41n+5ZdnnovcOvaD1hKxrLAH1SGdbSgsqKHxkZsSBlNX7SSSEO2oQtfAPneUjyfsJ37Z8MvYY355Srm9kZ2yaUwQqyTvvZORz4fDqm1DNrnSZDdPSWKpfDGqzm12HHRmz8+aql9C8DQotro1PsD3pXKUD2sIBksUuJ+AMqj01xu+BHj+ppbSe+wqGxa9M3uAPL0JEw8MbVKO9np8SKz1HwDXt98Qn1jqbEQpISpjCB+nq9ILKjK0KNVDsEYzZePYsI5lxkgdknsX2DYW5yu1QvQnF6g+LmxQ4hS7tDE2WiEAftnGL+s2lKXo5W0Mity2Q9sDnZtxaeeEWSLeaJclpsMUjAJARcK2TIturK+lCS7XKautccvovzr0CaJlJanwbl+6eu02wvlqqY1XtoUA+M5ijrakQvdWMV7F3FK/PPaigQw+EpQShk1QA1MneAGY3GOX6xtiezzRBaQgDP1ZxP478vXGk8VMVuyfTPLUiKrjxcyPxlprJEbVeYsWfrYUSTit7P1Y+DbLC7e/pxKktPCHh1fdtyOAI20ss/BlxrR/ixzW7SPf9kJ5nv+IDicThveyBS1J63l3T4VVPIDN14gqArzS9lktJHyr1qCcgI6tSJgIGE8k6DEHKMNhk6bAy3M=
+    secure: rC+e4C8+apNPmi70U1A6b6fr/6sCrw+esirDLpSk6QUAgQpIH1OLvKbgg7cpNSakcmY9xzb1EDIZAu613WnSH/j36NOgT2QPs3zF9fzvHNwMG8JXwUaAURMKdaAgwmpc0yET7avE9Jccfxpr3AG48FQZhQjqJ7IXPXzNRK/nIFah3AaYgNkbxnEAAU7es2ufWm2aPpghEU/XE7F/AJNowNc0nSTZZ3/Cez1m3XMJpdGwlP9UN+F5ApRxhw6mGmSecg41vc4yI9HP1V44TejolXUC9T+3/U4Ui4l4ClnUxqZbgRtXLAmHN61nBIlF10CLha5uHuTzwU7Yq5adPQuJ+2Hx3XwTBiehRq5Lkg7wyef4JbiUbr8nUm2gfWbOfPl2oaaoWVsIA/4/9j6R3nv51kKt4hD4DU7MsfOoVbodmqb2sPHHZPanx/+dgGMtoFwR5XeaYlWT04SkVuel3koJ9DQHGLjcPIg6GXiVgvrjtF9+4mjEzscbLaRQEMEm4kKga0kSlGf7yaSg91IvIWM3fCs82ahueHW3HfhuzIT+mztXBs4L4eKQ0Tz1Y/YlnTr1RWY6myqeYEv8Cd6WPXs4XbRR8joR8MVNq9vsjYxiL8QSTTipYG+Cns+d9OxhT+f3zO00gwMnTfOdaQ8Hks2USjTA6hO6CQmhbenQXv6ZL2U=
   app:
     master: taverna-webclient
-    staging: taverna-webclient-staging
+    branch-test: tarvena-deploy-test
