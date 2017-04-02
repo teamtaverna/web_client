@@ -9,7 +9,6 @@ const webpackIsomorphicToolsPlugin = new IsomorphicPlugin(require('./isomorphic.
 
 const cssNames = '[name].[hash].css';
 const extractCSS = new ExtractTextPlugin(cssNames);
-const ENV = process.env.NODE_ENV;
 
 module.exports = webpackMerge(commonConfig, {
   devtool: 'cheap-source-map',
@@ -25,21 +24,14 @@ module.exports = webpackMerge(commonConfig, {
     new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        'ENV': JSON.stringify(ENV)
+        'NODE_ENV': JSON.stringify('production')
       }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      children: true,
-      // (use all children of the chunk)
-      async: true,
-      // (create an async commons chunk)
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       },
       minimize: true,
-
     }),
     webpackIsomorphicToolsPlugin,
 
