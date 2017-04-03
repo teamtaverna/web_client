@@ -44,11 +44,6 @@ describe('<GenericMenuBarSelector />', () => {
       .to.equal(true);
   });
 
-  it('should make sure the parent element for the TimetableIcon is a div', () => {
-    expect(wrapper.find(TimetableIcon).parent().is('div'))
-      .to.equal(true);
-  });
-
   it('should render the dropdown menu', () => {
     expect(wrapper.find('.ui .dropdown .menu')).to.have.length(1);
   });

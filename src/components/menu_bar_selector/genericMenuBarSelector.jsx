@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { TimetableIcon, ExpandIcon } from '../icons';
+import { ExpandIcon } from '../icons';
 
 
 const GenericMenuBarSelector = props => (
@@ -11,7 +11,7 @@ const GenericMenuBarSelector = props => (
     >
       <div className="icon section">
         <div className="icon header">
-          <TimetableIcon />
+          {props.selectorIcon}
         </div>
         <div className="ui mobile only sub header">{props.mobileSubHeader}</div>
       </div>
@@ -34,6 +34,7 @@ const GenericMenuBarSelector = props => (
 GenericMenuBarSelector.propTypes = {
   mobileSubHeader: PropTypes.string,
   mediumHeader: PropTypes.string,
+  selectorIcon: PropTypes.node,
   regularHeader: PropTypes.string,
   children: PropTypes.node,
 };

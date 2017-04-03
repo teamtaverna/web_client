@@ -1,8 +1,6 @@
 import React from 'react';
-import DayPicker from 'react-day-picker';
-import 'react-day-picker/lib/style.css';
 import Logo from '../logo/logo';
-import GenericMenuBarSelector from '../menu_bar_selector/genericMenuBarSelector';
+import Calendar from '../calendar/calendar';
 
 const MenuPageLayout = () => (
   <div id="home page" className="tvn page">
@@ -27,20 +25,11 @@ const MenuPageLayout = () => (
                         tvn no padding`}
       >
         <div className="selectors">
-          <GenericMenuBarSelector
+          <Calendar
             mobileSubHeader="LOS-A"
             mediumHeader="Lagos General"
             regularHeader="Timetable"
-          >
-            <div className="content">
-              <DayPicker
-                initialMonth={new Date(2017, 0)}
-              />
-            </div>
-            <div className="footer">
-              <button className="ui basic button">Show Today</button>
-            </div>
-          </GenericMenuBarSelector>
+          />
         </div>
       </div>
 
