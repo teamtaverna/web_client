@@ -13,7 +13,7 @@ const publicPath = development ? `http://localhost:${+process.env.PORT + 1}/asse
 module.exports = {
   entry: {
     app: [
-      './src/client'
+      'babel-polyfill', './src/client'
     ],
   },
   resolve: {
