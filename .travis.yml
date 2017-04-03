@@ -8,7 +8,7 @@ install:
 
 script:
   - npm test
-  - npm build
+  - npm run build
 
 after_success: npm run coverage
 
