@@ -25,7 +25,7 @@ module.exports = webpackMerge(commonConfig, {
     new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        'ENV': JSON.stringify(ENV)
+        'NODE_ENV': JSON.stringify('production')
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({
