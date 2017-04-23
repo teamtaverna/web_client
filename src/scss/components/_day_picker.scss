@@ -35,12 +35,12 @@ $calendar-day-size: 30px;
       }
     }
 
-      .DayPicker-NavButton--prev {
+      .DayPicker-NavButtons--prev {
         left: 0;
         transform: rotate(90deg);
       }
 
-      .DayPicker-NavButton--next {
+      .DayPicker-NavButtons--next {
         right: 0;
         transform: rotate(-90deg);
       }
